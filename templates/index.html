@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+
+{% block title %}銘柄情報分析{% endblock %}
+{% block description %}公開データを元に銘柄情報を整理・要約して表示する参考ツールです。{% endblock %}
+
+{% block content %}
+<section class="home">
+
+  <div class="hero2">
+    <div class="hero2-bg"></div>
+    <div class="hero2-inner">
+      <p class="hero2-kicker">安全・即時・無料（参考情報）</p>
+      <h1 class="hero2-title">銘柄情報分析</h1>
+      <p class="hero2-subtitle">
+        公開されている企業情報・市場関連データを整理し、把握しやすくする参考表示ツールです。<br>
+        ※本サービスは投資助言を目的としたものではありません。
+      </p>
+
+      <form class="hero2-search" id="stockForm" action="/search" method="get">
+        <input class="hero2-input" id="q" name="q" placeholder="例：7203 / トヨタ自動車" autocomplete="off" />
+        <button class="hero2-btn" type="submit">情報を表示する</button>
+      </form>
+
+      <p class="hero2-note">※入力後、まずは参考情報（簡易）を表示します。</p>
+    </div>
+  </div>
+
+  <!-- ✅ 基础结果：先显示，合规关键 -->
+  <div id="resultWrap" class="result-wrap" style="display:none;">
+    <div class="result-card">
+      <div class="result-head">
+        <h2>参考情報（簡易）</h2>
+        <span class="result-pill">無料</span>
+      </div>
+
+      <p class="muted" id="resultQuery"></p>
+
+      <div class="result-grid">
+        <div class="mini">
+          <div class="mini-k">分類</div>
+          <div class="mini-v" id="rType">—</div>
+        </div>
+        <div class="mini">
+          <div class="mini-k">リスク</div>
+          <div class="mini-v" id="rRisk">—</div>
+        </div>
+        <div class="mini">
+          <div class="mini-k">メモ</div>
+          <div class="mini-v" id="rNote">—</div>
+        </div>
+      </div>
+
+      <div class="result-actions">
+        <!-- ✅ 绿色点点 icon -->
+        <button class="btn btn-primary btn-line" id="openLineModal" type="button">
+          LINEで詳細データを受け取る
+        </button>
+
+        <button class="btn" id="resetBtn" type="button">別の銘柄を入力</button>
+      </div>
+
+      <!-- ✅ 你要的“搜索框提示 + 放大” -->
+      <form class="mini-search" id="miniSearch">
+        <input class="mini-input" id="q2" placeholder="別の銘柄を入力（例：6758 / ソニー）" />
+        <button class="mini-btn" type="submit">検索</button>
+      </form>
+
+      <p class="small-note">
+        ※表示は公開データの整理・可視化であり、売買判断や投資行動を推奨するものではありません。
+      </p>
+    </div>
+  </div>
+
+  <div class="price-grid">
+    <a class="price-card" href="/about">
+      <div class="price-badge">使い方</div>
+      <h2>このサイトについて</h2>
+      <p class="muted">目的・運営方針・使い方を確認できます。</p>
+      <div class="price-foot">詳細を見る →</div>
+    </a>
+
+    <a class="price-card" href="/privacy">
+      <div class="price-badge alt">ポリシー</div>
+      <h2>プライバシーポリシー</h2>
+      <p class="muted">個人情報の取り扱い方針について。</p>
+      <div class="price-foot">詳細を見る →</div>
+    </a>
+
+    <a class="price-card" href="/contact">
+      <div class="price-badge alt2">連絡</div>
+      <h2>お問い合わせ</h2>
+      <p class="muted">ご質問・ご意見はこちら。</p>
+      <div class="price-foot">詳細を見る →</div>
+    </a>
+  </div>
+
+</section>
+
+<!-- ✅ 弹窗：必须是“点击按钮后才出现” -->
+<div class="modal" id="lineModal" aria-hidden="true">
+  <div class="modal-backdrop" data-close="1"></div>
+
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-top">
+      <div class="modal-title" id="modalTitle">公開データ整理レポート（参考情報）</div>
+      <button class="modal-x" type="button" data-close="1" aria-label="Close">×</button>
+    </div>
+
+    <div class="modal-body">
+      <div class="modal-box">
+        <h3 style="margin:0 0 8px;">📊 LINEで参考情報を確認する</h3>
+        <p class="muted" style="margin:0;">
+          以下のボタンからLINE公式アカウント（第三者サービス）を追加してください。<br>
+          追加後、銘柄コードまたは銘柄名を送信すると、整理した参考情報を確認できます。<br><br>
+          ※本情報は投資助言・売買判断を目的としたものではありません。
+        </p>
+      </div>
+
+      <!-- ✅ 替换成你的 LINE 链接 -->
+      <a class="modal-cta" href="https://line.me/R/ti/p/@YOUR_LINE_ID" target="_blank" rel="noopener">
+        ↗ LINEで詳細データを受け取る
+      </a>
+
+      <p class="small-note" style="margin-top:10px;">
+        ※クリックするとLINE（第三者サービス）へ移動します。
+      </p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

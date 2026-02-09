@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% block title %}株式の基礎知識とツール{% endblock %}</title>
+  <meta name="description" content="{% block description %}教育目的の株式情報整理サイト{% endblock %}">
+
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="/">株式の基礎知識とツール</a>
+    <nav class="nav">
+      <a class="nav-link {% if request.path == '/' %}is-active{% endif %}" href="/">ホーム</a>
+      <a class="nav-link {% if request.path.startswith('/about') %}is-active{% endif %}" href="/about">このサイトについて</a>
+      <a class="nav-link {% if request.path.startswith('/contact') %}is-active{% endif %}" href="/contact">お問い合わせ</a>
+      <a class="nav-link {% if request.path.startswith('/privacy') %}is-active{% endif %}" href="/privacy">プライバシー</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  {% block content %}{% endblock %}
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div>© 2026 Stock Basics & Tools</div>
+    <div class="muted">※ 教育目的であり投資助言ではありません</div>
+  </div>
+</footer>
+
+<script src="/static/main.js"></script>
+</body>
+</html>

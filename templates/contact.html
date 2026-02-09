@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}お問い合わせ{% endblock %}
+{% block description %}ご質問・ご意見はこちらからご連絡ください。{% endblock %}
+
+{% block content %}
+<section class="page">
+  <div class="page-head">
+    <h1>お問い合わせ</h1>
+    <p class="lead">
+      ご質問やご意見、不具合の報告などがありましたら、以下までご連絡ください。
+    </p>
+  </div>
+
+  <div class="card-box">
+    <h2>連絡先</h2>
+    <ul class="list">
+      <li>
+        Email：
+        <a href="mailto:contact@yourdomain.com">contact@yourdomain.com</a>
+        <span class="muted">（あとで自分のメールに変更OK）</span>
+      </li>
+    </ul>
+
+    <div class="note" style="margin-top:14px;">
+      <strong>お願い</strong><br>
+      可能であれば「どのページで」「何が起きたか」を書いてくれると助かります。
+    </div>
+  </div>
+</section>
+{% endblock %}

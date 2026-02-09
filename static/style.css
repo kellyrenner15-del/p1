@@ -1,0 +1,446 @@
+:root{
+  --bg:#ffffff;
+  --text:#0f172a;
+  --muted:#475569;
+  --line:#e2e8f0;
+  --card:#f8fafc;
+  --accent:#2563eb;
+  --accent2:#0ea5e9;
+}
+
+*{ box-sizing:border-box; }
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  line-height:1.7;
+  color:var(--text);
+  background:var(--bg);
+}
+a{ color: inherit; }
+
+.container{
+  width:min(1050px, calc(100% - 32px));
+  margin:0 auto;
+}
+
+/* ---------- Topbar / nav ---------- */
+.topbar{
+  position:sticky;
+  top:0;
+  background:rgba(255,255,255,.92);
+  backdrop-filter: blur(12px);
+  border-bottom:1px solid var(--line);
+  z-index:10;
+}
+.topbar-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 0;
+  gap:16px;
+}
+.brand{
+  font-weight:800;
+  text-decoration:none;
+  color:var(--text);
+  letter-spacing:-.02em;
+}
+.nav{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.nav-link{
+  text-decoration:none;
+  color:var(--muted);
+  padding:8px 10px;
+  border-radius:12px;
+  transition:.15s;
+}
+.nav-link:hover{
+  background:var(--card);
+  color:var(--text);
+}
+.nav-link.is-active{
+  background: rgba(37,99,235,.10);
+  color: #1d4ed8;
+  border: 1px solid rgba(37,99,235,.18);
+}
+
+/* ---------- Typography helpers ---------- */
+h1,h2,h3{ letter-spacing:-.02em; }
+.lead{ color: var(--muted); font-size: 16px; }
+.muted{ color: var(--muted); }
+
+.small-note{
+  margin-top:12px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* ---------- Footer ---------- */
+.footer{
+  border-top:1px solid var(--line);
+  margin-top:50px;
+  padding:18px 0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* ===== Home page wrapper ===== */
+.home{
+  padding: 10px 0 0;
+}
+
+/* ===== Landing hero like Namecheap ===== */
+.hero2{
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  overflow: hidden;
+  margin: 22px 0 18px;
+}
+.hero2-bg{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(900px 420px at 75% 35%, rgba(14,165,233,.45), transparent 60%),
+    radial-gradient(700px 380px at 20% 40%, rgba(37,99,235,.55), transparent 62%),
+    linear-gradient(120deg, #0b1220, #0b2a6a 45%, #0ea5e9);
+  filter: saturate(1.05);
+}
+.hero2-inner{
+  position:relative;
+  padding: 44px 22px 32px;
+  color: #fff;
+  text-align:center;
+}
+.hero2-kicker{
+  margin:0 0 10px;
+  opacity:.92;
+  font-size:13px;
+}
+.hero2-title{
+  margin:0 0 10px;
+  font-size:44px;
+  line-height:1.1;
+  letter-spacing:-.03em;
+}
+.hero2-subtitle{
+  margin:0 auto 18px;
+  max-width: 720px;
+  opacity:.92;
+  font-size:16px;
+}
+
+/* ✅ 搜索框加大（你要的） */
+.hero2-search{
+  width: min(980px, 100%);
+  margin: 16px auto 10px;
+  display:flex;
+  gap:10px;
+  padding: 10px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.22);
+  backdrop-filter: blur(10px);
+}
+.hero2-input{
+  flex:1;
+  height: 58px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.25);
+  background: rgba(255,255,255,.95);
+  padding: 0 16px;
+  outline: none;
+  font-size: 18px;
+}
+.hero2-btn{
+  height: 58px;
+  padding: 0 22px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 800;
+  color:#fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  font-size: 16px;
+}
+.hero2-note{
+  margin: 10px 0 0;
+  font-size: 12px;
+  opacity:.9;
+}
+
+/* ===== 3 cards under hero ===== */
+.price-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap:14px;
+  margin: 14px 0 10px;
+}
+.price-card{
+  position:relative;
+  display:block;
+  text-decoration:none;
+  color: var(--text);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 16px;
+  transition: .15s;
+  box-shadow: 0 8px 24px rgba(2,6,23,.06);
+}
+.price-card:hover{
+  transform: translateY(-2px);
+  border-color:#cbd5e1;
+}
+.price-badge{
+  display:inline-block;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(37,99,235,.10);
+  color: #1d4ed8;
+  border: 1px solid rgba(37,99,235,.18);
+  margin-bottom: 10px;
+}
+.price-badge.alt{
+  background: rgba(14,165,233,.10);
+  color: #0369a1;
+  border-color: rgba(14,165,233,.18);
+}
+.price-badge.alt2{
+  background: rgba(15,23,42,.10);
+  color: #0f172a;
+  border-color: rgba(15,23,42,.16);
+}
+.price-card h2{ margin: 0 0 6px; font-size: 18px; }
+.price-foot{ margin-top: 14px; color: var(--muted); font-weight: 700; }
+
+/* ===== Result block ===== */
+.result-wrap{
+  margin: 16px 0 22px;
+}
+.result-card{
+  border:1px solid var(--line);
+  background: linear-gradient(180deg, var(--card), #fff);
+  border-radius: 22px;
+  padding: 18px;
+}
+.result-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+.result-pill{
+  font-size:12px;
+  font-weight:800;
+  padding:6px 10px;
+  border-radius:999px;
+  background: rgba(34,197,94,.12);
+  border: 1px solid rgba(34,197,94,.20);
+  color:#15803d;
+}
+
+.result-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+.mini{
+  border:1px solid var(--line);
+  border-radius: 18px;
+  background:#fff;
+  padding: 14px;
+}
+.mini-k{
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.mini-v{
+  font-size: 20px;
+  font-weight: 800;
+}
+
+/* buttons */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:11px 14px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  text-decoration:none;
+  color:var(--text);
+  background:var(--bg);
+  transition:.15s;
+  cursor:pointer;
+}
+.btn:hover{ transform: translateY(-1px); }
+
+.btn-primary{
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color:white;
+  font-weight:800;
+}
+
+/* ✅ LINE green dot icon */
+.btn-line{
+  position: relative;
+  padding-left: 18px;
+}
+.btn-line::before{
+  content:"";
+  width:12px;
+  height:12px;
+  border-radius:999px;
+  background:#22c55e;
+  display:inline-block;
+  margin-right:10px;
+  box-shadow:0 0 0 4px rgba(34,197,94,.18);
+  vertical-align:middle;
+}
+
+.result-actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top: 14px;
+}
+
+/* ✅ mini search */
+.mini-search{
+  display:flex;
+  gap:10px;
+  margin-top:12px;
+}
+.mini-input{
+  flex:1;
+  height:46px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  padding:0 14px;
+  font-size:15px;
+  background:#fff;
+}
+.mini-btn{
+  height:46px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  padding:0 14px;
+  background:#fff;
+  cursor:pointer;
+}
+
+/* ===== Modal ===== */
+.modal{
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 50;
+}
+.modal.is-open{
+  display:block;
+}
+.modal-backdrop{
+  position:absolute;
+  inset:0;
+  background: rgba(2,6,23,.58);
+}
+.modal-panel{
+  position: relative;
+  width: min(520px, calc(100% - 28px));
+  margin: 60px auto;
+  background: #0b1220;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0,0,0,.35);
+}
+.modal-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 14px 16px;
+  background: #2f59ff;
+  color: #fff;
+}
+.modal-title{
+  font-weight: 900;
+}
+.modal-x{
+  width: 34px;
+  height: 34px;
+  border:none;
+  border-radius: 10px;
+  background: rgba(255,255,255,.18);
+  color:#fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+.modal-body{
+  padding: 16px;
+  color:#e5e7eb;
+}
+.modal-box{
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 16px;
+  padding: 14px;
+}
+.modal-cta{
+  display:block;
+  margin-top: 14px;
+  text-align:center;
+  padding: 16px 14px;
+  border-radius: 16px;
+  background: #22c55e;
+  color:#062a13;
+  font-weight: 900;
+  text-decoration:none;
+}
+.modal-cta:hover{
+  filter: brightness(.98);
+}
+
+/* responsive */
+@media (max-width: 860px){
+  .hero2-title{ font-size: 32px; }
+  .hero2-search{ flex-direction: column; }
+  .price-grid{ grid-template-columns: 1fr; }
+  .result-grid{ grid-template-columns: 1fr; }
+}
+/* =========================
+   📱 手机端：搜索框强制加大（最终覆盖版）
+   ========================= */
+@media (max-width: 768px){
+  .hero2-search{
+    padding: 18px !important;
+    border-radius: 20px !important;
+  }
+
+  /* 输入框：更高更大 */
+  input.hero2-input{
+    width: 100% !important;
+    height: 82px !important;
+    font-size: 24px !important;
+    padding: 0 22px !important;
+    border-radius: 18px !important;
+    line-height: 82px !important; /* 让文字垂直更居中 */
+  }
+
+  /* 按钮同样加大（如果你手机端按钮也想大） */
+  button.hero2-btn{
+    width: 100% !important;
+    height: 82px !important;
+    font-size: 20px !important;
+    border-radius: 18px !important;
+  }
+}

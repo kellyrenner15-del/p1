@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}このサイトについて{% endblock %}
+{% block description %}本サイトの目的、対象読者、使い方、免責事項について説明します。{% endblock %}
+
+{% block content %}
+<section class="page">
+  <div class="page-head">
+    <h1>このサイトについて</h1>
+    <p class="lead">
+      初心者向けに、株式投資の基礎（用語・指標・チャート）と、無料ツールの使い方を
+      「迷わない順番」で学べるように整理しています。
+    </p>
+  </div>
+
+  <div class="grid-2">
+    <div class="card-box">
+      <h2>対象読者</h2>
+      <ul class="list">
+        <li>株をこれから学びたい初心者</li>
+        <li>PER / PBR などの指標をざっくり理解したい方</li>
+        <li>チャートやニュースの見方に慣れたい方</li>
+      </ul>
+    </div>
+
+    <div class="card-box">
+      <h2>このサイトでできること</h2>
+      <ul class="list">
+        <li>基本用語・指標の意味と注意点</li>
+        <li>チャートの見方（初心者向け）</li>
+        <li>無料ツールの使い方まとめ</li>
+        <li>よくある疑問の整理</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card-box">
+    <h2>使い方（おすすめの順番）</h2>
+    <ol class="list">
+      <li>まずは用語（PER / PBR / 配当など）を一通り確認</li>
+      <li>次に指標の「弱点・注意点」を理解</li>
+      <li>最後にツールを使って実際に見ながら慣れる</li>
+    </ol>
+  </div>
+
+  <div class="note">
+    <strong>免責事項</strong><br>
+    本サイトは教育目的の情報提供であり、投資助言ではありません。最終的な判断はご自身で行ってください。
+  </div>
+</section>
+{% endblock %}
