@@ -62,7 +62,9 @@ def api_basic_result():
         "risk": "中（参考）" if has_number else "低〜中（参考）",
         "note": "公開情報を元にした要約表示です。詳細はLINEで確認できます。"
     })
-
+@app.route("/terms")
+def terms():
+    return render_template("terms.html")
 
 # =========================
 # 启动
