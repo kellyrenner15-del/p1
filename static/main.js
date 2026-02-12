@@ -109,3 +109,43 @@
     }
   });
 })();
+// ===== Mobile Drawer Menu =====
+(function () {
+  const btn = document.getElementById("hamburgerBtn");
+  const drawer = document.getElementById("mobileMenu");
+  const backdrop = document.getElementById("drawerBackdrop");
+  const closeBtn = document.getElementById("drawerCloseBtn");
+
+  if (!btn || !drawer || !backdrop || !closeBtn) return;
+
+  const open = () => {
+    drawer.classList.add("open");
+    backdrop.hidden = false;
+    drawer.setAttribute("aria-hidden", "false");
+    btn.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden"; // prevent background scroll
+  };
+
+  const close = () => {
+    drawer.classList.remove("open");
+    backdrop.hidden = true;
+    drawer.setAttribute("aria-hidden", "true");
+    btn.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+  };
+
+  btn.addEventListener("click", () => {
+    const isOpen = drawer.classList.contains("open");
+    isOpen ? close() : open();
+  });
+
+  closeBtn.addEventListener("click", close);
+  backdrop.addEventListener("click", close);
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") close();
+  });
+
+  // close after clicking any link
+  drawer.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
+})();

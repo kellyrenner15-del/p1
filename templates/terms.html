@@ -1,35 +1,65 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>利用規約</title>
-</head>
-<body>
-  <h1>利用規約</h1>
+<!-- templates/terms.html -->
+{% extends "base.html" %}
+{% block title %}利用規約{% endblock %}
 
-  <p>
-    本サイト（wuelefo.com）は株式情報や学習目的の参考ツールを提供します。
-    投資助言を目的としたものではありません。
+{% block content %}
+<main class="container page">
+  <h1 class="page-title">利用規約</h1>
+  <p class="page-lead">
+    本利用規約（以下「本規約」）は、「株式の基礎知識とツール」（以下「当サイト」）の利用条件を定めるものです。
+    ご利用の前に必ずお読みください。
   </p>
 
-  <h2>免責事項</h2>
-  <p>
-    本サイトの情報は参考目的であり、投資判断は利用者ご自身の責任で行ってください。
-  </p>
+  <section class="card">
+    <h2>1. 免責事項（重要）</h2>
+    <ul>
+      <li>当サイトは教育・参考情報の提供を目的としており、投資助言や勧誘を目的とするものではありません。</li>
+      <li>当サイトの情報の正確性・完全性・最新性を保証するものではありません。</li>
+      <li>当サイトの情報を利用して生じたいかなる損害についても、当サイトは一切の責任を負いません。</li>
+      <li>投資判断は必ずご自身の責任で行ってください。</li>
+    </ul>
+  </section>
 
-  <h2>禁止事項</h2>
-  <ul>
-    <li>不正利用</li>
-    <li>サイト運営の妨害</li>
-    <li>法律に違反する行為</li>
-  </ul>
+  <section class="card">
+    <h2>2. 禁止事項</h2>
+    <ul>
+      <li>法令または公序良俗に反する行為</li>
+      <li>当サイトまたは第三者の権利（著作権、商標権等）を侵害する行為</li>
+      <li>サーバーやネットワークに過度な負荷をかける行為、スクレイピング等</li>
+      <li>不正アクセス、またはそれを試みる行為</li>
+    </ul>
+  </section>
 
-  <h2>お問い合わせ</h2>
-  <p>
-    ご質問は以下までご連絡ください：<br>
-    support@yourcompany.jp
-  </p>
+  <section class="card">
+    <h2>3. 著作権・知的財産権</h2>
+    <p>
+      当サイトに掲載されている文章・画像・デザイン等の著作権は当サイトまたは正当な権利者に帰属します。
+      無断転載・複製・再配布を禁じます。
+    </p>
+  </section>
 
-  <p>© 2026 Stock Basics & Tools</p>
-</body>
-</html>
+  <section class="card">
+    <h2>4. 外部リンク</h2>
+    <p>
+      当サイトには外部サイトへのリンクが含まれる場合があります。
+      外部サイトの内容について当サイトは責任を負いません。
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>5. 規約の変更</h2>
+    <p>
+      当サイトは必要に応じて本規約を変更できるものとします。
+      変更後の規約は当サイト上に表示した時点から効力を生じます。
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>6. お問い合わせ</h2>
+    <p>
+      本規約に関するお問い合わせは、以下までご連絡ください。<br>
+      Email: <a href="mailto:kellyrenner15@gmail.com">kellyrenner15@gmail.com</a>
+    </p>
+  </section>
+</main>
+{% endblock %}
