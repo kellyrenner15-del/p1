@@ -12,20 +12,17 @@
 
 <body>
 
-<header class="topbar">
+<<header class="topbar">
   <div class="container topbar-inner">
     <a class="brand" href="/">株式の基礎知識とツール</a>
-      <a class="brand" href="/">株式の基礎知識とツール</a>
 
-<!-- ✅ 加在这里 -->
-<button class="hamburger" id="hamburgerBtn">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
+    <!-- 汉堡按钮（手机显示） -->
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
 
-<nav class="nav">
-    <nav class="nav">
+    <!-- 桌面导航（桌面显示） -->
+    <nav class="nav-desktop">
       <a class="nav-link {% if request.path == '/' %}is-active{% endif %}" href="/">ホーム</a>
       <a class="nav-link {% if request.path.startswith('/about') %}is-active{% endif %}" href="/about">このサイトについて</a>
       <a class="nav-link {% if request.path.startswith('/contact') %}is-active{% endif %}" href="/contact">お問い合わせ</a>
@@ -34,13 +31,14 @@
     </nav>
   </div>
 </header>
-<!-- ===== Mobile Drawer ===== -->
+
+<!-- Mobile Drawer -->
 <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
 
-<aside class="drawer" id="mobileMenu">
+<aside class="drawer" id="mobileMenu" aria-hidden="true">
   <div class="drawer-header">
     <div class="drawer-title">メニュー</div>
-    <button class="drawer-close" id="drawerCloseBtn">×</button>
+    <button class="drawer-close" id="drawerCloseBtn" aria-label="Close menu">×</button>
   </div>
 
   <nav class="drawer-nav">
