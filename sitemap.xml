@@ -14,7 +14,11 @@
   </url>
 
   <url>
-   <loc>https://wuelefo.com/privacy</loc>
+    <loc>https://wuelefo.com/privacy</loc>
   </url>
+
+  <url>
     <loc>https://wuelefo.com/terms</loc>
+  </url>
+
 </urlset>
