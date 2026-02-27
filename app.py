@@ -66,6 +66,17 @@ def api_basic_result():
 def terms():
     return render_template("terms.html")
 
+  @app.route("/robots.txt")
+    def robots():
+        return Response(
+            "User-agent: *\nAllow: /\n\nSitemap: https://wuelefo.com/sitemap.xml",
+            mimetype="text/plain"
+        )
+
+
+@app.route("/stock-risk-guide")
+def stock_risk_guide():
+    return render_template("stock_risk_guide.html")
 # =========================
 # 启动
 # =========================
@@ -74,14 +85,6 @@ if __name__ == "__main__":
     port = int(os.environ.get("PORT", "5000"))
     app.run(host="0.0.0.0", port=port, debug=debug)
 
-    @app.route("/robots.txt")
-    def robots():
-        return Response(
-            "User-agent: *\nAllow: /\n\nSitemap: https://wuelefo.com/sitemap.xml",
-            mimetype="text/plain"
-        )
 
 
-    @app.route("/stock-risk-guide")
-    def stock_risk_guide():
-        return render_template("stock_risk_guide.html")
+
