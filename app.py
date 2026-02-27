@@ -80,3 +80,8 @@ if __name__ == "__main__":
             "User-agent: *\nAllow: /\n\nSitemap: https://wuelefo.com/sitemap.xml",
             mimetype="text/plain"
         )
+
+
+    @app.route("/stock-risk-guide")
+    def stock_risk_guide():
+        return render_template("stock_risk_guide.html")
