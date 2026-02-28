@@ -4,6 +4,9 @@
 {% block description %}教育目的の株式情報整理サイト。株式投資の基礎知識、リスクの考え方、情報整理ツールを提供します。{% endblock %}
 {% block canonical %}https://wuelefo.com/{% endblock %}
 {% block og_url %}https://wuelefo.com/{% endblock %}
+
+{% block content %}
+
 <section class="home">
 
   <div class="hero2">
@@ -17,7 +20,7 @@
       </p>
 
       <form class="hero2-search" id="stockForm" action="/search" method="get">
-        <input class="hero2-input" id="q" name="q" placeholder="例：7203 / トヨタ自動車" autocomplete="off" />
+        <input class="hero2-input" id="q" name="q" placeholder="例: 7203 / トヨタ自動車" autocomplete="off" />
         <button class="hero2-btn" type="submit">情報を表示する</button>
       </form>
 
@@ -28,6 +31,7 @@
   <!-- ✅ 基础结果：先显示，合规关键 -->
   <div id="resultWrap" class="result-wrap" style="display:none;">
     <div class="result-card">
+
       <div class="result-head">
         <h2>参考情報（簡易）</h2>
         <span class="result-pill">無料</span>
@@ -40,10 +44,12 @@
           <div class="mini-k">分類</div>
           <div class="mini-v" id="rType">—</div>
         </div>
+
         <div class="mini">
           <div class="mini-k">リスク</div>
           <div class="mini-v" id="rRisk">—</div>
         </div>
+
         <div class="mini">
           <div class="mini-k">メモ</div>
           <div class="mini-v" id="rNote">—</div>
@@ -61,13 +67,14 @@
 
       <!-- ✅ 你要的“搜索框提示 + 放大” -->
       <form class="mini-search" id="miniSearch">
-        <input class="mini-input" id="q2" placeholder="別の銘柄を入力（例：6758 / ソニー）" />
+        <input class="mini-input" id="q2" placeholder="別の銘柄を入力（例: 6758 / ソニー）" />
         <button class="mini-btn" type="submit">検索</button>
       </form>
 
       <p class="small-note">
         ※表示は公開データの整理・可視化であり、売買判断や投資行動を推奨するものではありません。
       </p>
+
     </div>
   </div>
 
@@ -80,7 +87,7 @@
     </a>
 
     <a class="price-card" href="/privacy">
-      <div class="price-badge alt">ポリシー</div>
+      <div class="price-badge alt1">ポリシー</div>
       <h2>プライバシーポリシー</h2>
       <p class="muted">個人情報の取り扱い方針について。</p>
       <div class="price-foot">詳細を見る →</div>
@@ -128,3 +135,4 @@
   </div>
 </div>
 
+{% endblock %}
