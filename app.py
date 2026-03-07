@@ -29,6 +29,17 @@ def terms():
 def stock_risk_guide():
     return render_template("stock_risk_guide.html")
 
+@app.route("/per-explained")
+def per_explained():
+    return render_template("per_explained.html")
+
+@app.route("/pbr-explained")
+def pbr_explained():
+    return render_template("pbr_explained.html")
+
+@app.route("/roe-explained")
+def roe_explained():
+    return render_template("roe_explained.html")
 
 # ------------------------
 # SEO 文件（全部放这里）
