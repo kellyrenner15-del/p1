@@ -41,6 +41,9 @@ def pbr_explained():
 def roe_explained():
     return render_template("roe_explained.html")
 
+@app.route("/stock-risk-basics")
+def stock_risk_basics():
+    return render_template("stock_risk_basics.html")
 # ------------------------
 # SEO 文件（全部放这里）
 # ------------------------
