@@ -44,6 +44,11 @@ def roe_explained():
 @app.route("/stock-risk-basics")
 def stock_risk_basics():
     return render_template("stock_risk_basics.html")
+
+@app.route("/stock-analysis-guide")
+def stock_analysis_guide():
+    return render_template("stock_analysis_guide.html")
+
 # ------------------------
 # SEO 文件（全部放这里）
 # ------------------------
