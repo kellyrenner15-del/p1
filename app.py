@@ -49,6 +49,10 @@ def stock_risk_basics():
 def stock_analysis_guide():
     return render_template("stock_analysis_guide.html")
 
+@app.route("/what-is-eps")
+def what_is_eps():
+    return render_template("what_is_eps.html")
+
 # ------------------------
 # SEO 文件（全部放这里）
 # ------------------------
