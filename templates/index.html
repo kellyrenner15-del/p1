@@ -65,7 +65,7 @@
         <button class="btn" id="resetBtn" type="button">別の銘柄を入力</button>
       </div>
 
-      <!-- ✅ 你要的“搜索框提示 + 放大” -->
+      <!-- ✅ 你要的"搜索框提示 + 放大" -->
       <form class="mini-search" id="miniSearch">
         <input class="mini-input" id="q2" placeholder="別の銘柄を入力（例: 6758 / ソニー）" />
         <button class="mini-btn" type="submit">検索</button>
@@ -78,6 +78,7 @@
     </div>
   </div>
 
+  <!-- ✨ 修改：只保留核心卡片，删除了PER/PBR/ROE/EPS卡片 -->
   <div class="price-grid">
     <a class="price-card" href="/about">
       <div class="price-badge">使い方</div>
@@ -99,31 +100,25 @@
       <p class="muted">ご質問・ご意見はこちら。</p>
       <div class="price-foot">詳細を見る →</div>
     </a>
-  <a class="price-card" href="/stock-risk-basics">
-  <div class="price-badge alt3">投資</div>
-  <h2>株のリスクとは</h2>
-  <p class="muted">株式投資の基本的なリスクと確認ポイントを初心者向けに解説します。</p>
-  <div class="price-foot">詳細を見る →</div>
-</a>
-<a class="price-card" href="/stock-analysis-guide">
-  <div class="price-badge alt1">分析</div>
-  <h2>銘柄分析とは</h2>
-  <p class="muted">初心者向けに、銘柄分析で最初に見るべきポイントを整理します。</p>
-  <div class="price-foot">詳細を見る →</div>
-</a>
 
- <a class="price-card" href="/what-is-eps">
-  <div class="price-badge alt1">指標</div>
-  <h2>EPSとは？</h2>
-  <p class="muted">1株当たり利益の意味、計算方法、PERとの関係を初心者向けに解説します。</p>
-  <div class="price-foot">詳細を見る →</div>
-</a>
+    <a class="price-card" href="/stock-risk-basics">
+      <div class="price-badge alt3">投資</div>
+      <h2>株のリスクとは</h2>
+      <p class="muted">株式投資の基本的なリスクと確認ポイントを初心者向けに解説します。</p>
+      <div class="price-foot">詳細を見る →</div>
+    </a>
 
+    <a class="price-card" href="/stock-analysis-guide">
+      <div class="price-badge alt1">分析</div>
+      <h2>銘柄分析とは</h2>
+      <p class="muted">初心者向けに、銘柄分析で最初に見るべきポイントを整理します。</p>
+      <div class="price-foot">詳細を見る →</div>
+    </a>
   </div>
 
 </section>
 
-<!-- ✅ 弹窗：必须是“点击按钮后才出现” -->
+<!-- ✅ 弹窗：必须是"点击按钮后才出现" -->
 <div class="modal" id="lineModal" aria-hidden="true">
   <div class="modal-backdrop" data-close="1"></div>
 
@@ -154,13 +149,5 @@
     </div>
   </div>
 </div>
-<div class="card-box" style="margin-top: 32px;">
-  <h2>投資基礎ガイド</h2>
-  <ul class="list">
-    <li><a href="/per-explained">PERとは？初心者向け完全解説</a></li>
-    <li><a href="/pbr-explained">PBRとは？株価の割安度の見方</a></li>
-    <li><a href="/roe-explained">ROEとは？企業収益力の見方</a></li>
-    <li><a href="/stock-risk-guide">銘柄リスク分析ガイド</a></li>
-  </ul>
-</div>
+
 {% endblock %}

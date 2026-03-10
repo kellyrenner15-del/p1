@@ -12,7 +12,7 @@
     modal.setAttribute('aria-hidden', 'true');
   }
 
-  // ✅ 你要“根据客户实际输入动态显示”的地方：改这里即可
+  // ✅ 你要"根据客户实际输入动态显示"的地方：改这里即可
   function makeBasicResult(input){
     const v = (input || "").trim();
     const hasNumber = /\d/.test(v);
@@ -87,7 +87,7 @@
       });
     }
 
-    // ✅ 重新输入
+    // ✅ 重���输入
     if (resetBtn) {
       resetBtn.addEventListener('click', function(){
         q.value = "";
@@ -109,6 +109,7 @@
     }
   });
 })();
+
 // ===== Mobile Drawer Menu =====
 (function () {
   const btn = document.getElementById("hamburgerBtn");
@@ -148,4 +149,58 @@
 
   // close after clicking any link
   drawer.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
+})();
+
+// ===== Desktop Dropdown Menu =====
+(function () {
+  const dropdownToggle = document.getElementById('indicatorsToggle');
+  const dropdown = document.querySelector('.nav-dropdown');
+  const dropdownMenu = document.getElementById('indicatorsMenu');
+
+  if (!dropdownToggle || !dropdown || !dropdownMenu) return;
+
+  // 动态调整位置
+  function updateMenuPosition() {
+    const rect = dropdown.getBoundingClientRect();
+
+    dropdownMenu.style.left = rect.left + 'px';
+    dropdownMenu.style.top = (rect.bottom + 8) + 'px';
+  }
+
+  // 切换下拉菜单
+  dropdownToggle.addEventListener('click', function (e) {
+    e.preventDefault();
+    dropdown.classList.toggle('open');
+    if (dropdown.classList.contains('open')) {
+      setTimeout(updateMenuPosition, 0);
+    }
+  });
+
+  // 点击菜单项后关闭
+  dropdownMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function () {
+      dropdown.classList.remove('open');
+    });
+  });
+
+  // 点击其他地方关闭下拉菜单
+  document.addEventListener('click', function (e) {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove('open');
+    }
+  });
+
+  // ESC 键关闭
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      dropdown.classList.remove('open');
+    }
+  });
+
+  // 监听窗口大小变化
+  window.addEventListener('resize', function () {
+    if (dropdown.classList.contains('open')) {
+      updateMenuPosition();
+    }
+  });
 })();

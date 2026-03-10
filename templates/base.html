@@ -39,6 +39,21 @@
       <a class="nav-link {% if request.path.startswith('/contact') %}is-active{% endif %}" href="/contact">お問い合わせ</a>
       <a class="nav-link {% if request.path.startswith('/privacy') %}is-active{% endif %}" href="/privacy">プライバシー</a>
       <a class="nav-link {% if request.path.startswith('/terms') %}is-active{% endif %}" href="/terms">利用規約</a>
+
+      <!-- ✨ 新增：下拉菜单 -->
+      <div class="nav-dropdown">
+        <a class="nav-link nav-dropdown-toggle" href="#" id="indicatorsToggle">
+          株式指標ガイド
+          <span class="dropdown-icon">▼</span>
+        </a>
+        <div class="dropdown-menu" id="indicatorsMenu">
+          <a href="/per-explained">PERとは?</a>
+          <a href="/pbr-explained">PBRとは?</a>
+          <a href="/roe-explained">ROEとは?</a>
+          <a href="/what-is-eps">EPSとは?</a>
+        </div>
+      </div>
+
       <a class="nav-link {% if request.path.startswith('/stock-risk-guide') %}is-active{% endif %}" href="/stock-risk-guide">銘柄リスク分析ガイド</a>
     </nav>
   </div>
@@ -59,6 +74,16 @@
     <a href="/contact">お問い合わせ</a>
     <a href="/privacy">プライバシー</a>
     <a href="/terms">利用規約</a>
+
+    <!-- ✨ 新増：手机菜单中的指标下拉 -->
+    <div class="drawer-submenu-title">株式指標ガイド</div>
+    <div class="drawer-submenu">
+      <a href="/per-explained">PERとは?</a>
+      <a href="/pbr-explained">PBRとは?</a>
+      <a href="/roe-explained">ROEとは?</a>
+      <a href="/what-is-eps">EPSとは?</a>
+    </div>
+
     <a href="/stock-risk-guide">銘柄リスク分析ガイド</a>
   </nav>
 </aside>

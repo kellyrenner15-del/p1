@@ -53,6 +53,10 @@ def stock_analysis_guide():
 def what_is_eps():
     return render_template("what_is_eps.html")
 
+@app.route("/what-is-bps")
+def what_is_bps():
+    return render_template("what_is_bps.html")
+
 # ------------------------
 # SEO 文件（全部放这里）
 # ------------------------
@@ -70,3 +74,4 @@ def sitemap_xml():
 # ------------------------
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
+
