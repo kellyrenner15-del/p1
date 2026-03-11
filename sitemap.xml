@@ -21,37 +21,44 @@
     <loc>https://wuelefo.com/terms</loc>
   </url>
 
-<url>
-  <loc>https://wuelefo.com/stock-risk-guide</loc>
-</url>
-
- <url>
-  <loc>https://wuelefo.com/per-explained</loc>
-</url>
-<url>
-  <loc>https://wuelefo.com/pbr-explained</loc>
-</url>
-<url>
-  <loc>https://wuelefo.com/roe-explained</loc>
-</url>
- <url>
-  <loc>https://wuelefo.com/stock-risk-basics</loc>
-</url>
- <url>
-  <loc>https://wuelefo.com/stock-analysis-guide</loc>
-</url>
+  <url>
+    <loc>https://wuelefo.com/stock-risk-guide</loc>
+  </url>
 
   <url>
-  <loc>https://wuelefo.com/what-is-eps</loc>
-</url>
-<url>
-  <loc>https://wuelefo.com/what-is-bps</loc>
-</url>
-<url>
-  <loc>https://wuelefo.com/dividend-yield-explained</loc>
+    <loc>https://wuelefo.com/per-explained</loc>
+  </url>
 
-</url>
- <url>
-  <loc>https://wuelefo.com/what-is-rsi</loc>
-</url>
+  <url>
+    <loc>https://wuelefo.com/pbr-explained</loc>
+  </url>
+
+  <url>
+    <loc>https://wuelefo.com/roe-explained</loc>
+  </url>
+
+  <url>
+    <loc>https://wuelefo.com/stock-risk-basics</loc>
+  </url>
+
+  <url>
+    <loc>https://wuelefo.com/stock-analysis-guide</loc>
+  </url>
+
+  <url>
+    <loc>https://wuelefo.com/what-is-eps</loc>
+  </url>
+
+  <url>
+    <loc>https://wuelefo.com/what-is-bps</loc>
+  </url>
+
+  <url>
+    <loc>https://wuelefo.com/dividend-yield-explained</loc>
+  </url>
+
+  <url>
+    <loc>https://wuelefo.com/what-is-rsi</loc>
+  </url>
+
 </urlset>
