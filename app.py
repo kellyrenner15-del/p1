@@ -57,9 +57,10 @@ def what_is_eps():
 def what_is_bps():
     return render_template("what_is_bps.html")
 
-@app.route("/dividend-yield-explained")
+@app.route("/dividend_yield_explained")
 def dividend_yield_explained():
     return render_template("dividend_yield_explained.html")
+
 # ------------------------
 # SEO 文件（全部放这里）
 # ------------------------
@@ -77,4 +78,3 @@ def sitemap_xml():
 # ------------------------
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
-

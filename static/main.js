@@ -87,7 +87,7 @@
       });
     }
 
-    // ✅ 重���输入
+    // ✅ 重新输入
     if (resetBtn) {
       resetBtn.addEventListener('click', function(){
         q.value = "";
