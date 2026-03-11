@@ -61,6 +61,10 @@ def what_is_bps():
 def dividend_yield_explained():
     return render_template("dividend_yield_explained.html")
 
+@app.route("/what_is_rsi")
+def what_is_rsi():
+    return render_template("what_is_rsi.html")
+
 # ------------------------
 # SEO 文件（全部放这里）
 # ------------------------
