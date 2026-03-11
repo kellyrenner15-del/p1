@@ -57,11 +57,11 @@ def what_is_eps():
 def what_is_bps():
     return render_template("what_is_bps.html")
 
-@app.route("/dividend_yield_explained")
+@app.route("/dividend-yield-explained")
 def dividend_yield_explained():
     return render_template("dividend_yield_explained.html")
 
-@app.route("/what_is_rsi")
+@app.route("/what-is-rsi")
 def what_is_rsi():
     return render_template("what_is_rsi.html")
 
