@@ -66,6 +66,15 @@ def dividend_yield_explained():
 def what_is_rsi():
     return render_template("what_is_rsi.html")
 
+@app.route("/moving_average_explained")
+def moving_average_explained():
+    return render_template("moving_average_explained.html")
+
+@app.route("/macd_explained")
+def macd_explained():
+    return render_template("macd_explained.html")
+
+
 # ------------------------
 # SEO 文件（全部放这里）
 # ------------------------
