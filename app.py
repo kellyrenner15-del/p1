@@ -74,6 +74,14 @@ def moving_average_explained():
 def macd_explained():
     return render_template("macd_explained.html")
 
+@app.route("/bollinger_bands_explained")
+def bollinger_bands_explained():
+    return render_template("bollinger_bands_explained.html")
+
+@app.route("/volume_analysis_explained")
+def volume_analysis_explained():
+    return render_template("volume_analysis_explained.html")
+
 
 # ------------------------
 # SEO 文件（全部放这里）
@@ -85,6 +93,7 @@ def robots_txt():
 @app.route("/sitemap.xml")
 def sitemap_xml():
     return send_from_directory(app.root_path, "sitemap.xml")
+
 
 
 # ------------------------
