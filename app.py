@@ -86,6 +86,9 @@ def volume_analysis_explained():
 def support_and_resistance_explained():
     return render_template("support_and_resistance_explained.html")
 
+@app.route("/candlestick_patterns_explained")
+def candlestick_patterns_explained():
+    return render_template("candlestick_patterns_explained.html")
 
 # ------------------------
 # SEO 文件（全部放这里）
