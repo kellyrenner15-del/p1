@@ -82,6 +82,10 @@ def bollinger_bands_explained():
 def volume_analysis_explained():
     return render_template("volume_analysis_explained.html")
 
+@app.route("/support_and_resistance_explained")
+def support_and_resistance_explained():
+    return render_template("support_and_resistance_explained.html")
+
 
 # ------------------------
 # SEO 文件（全部放这里）
