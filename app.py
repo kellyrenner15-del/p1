@@ -90,6 +90,12 @@ def support_and_resistance_explained():
 def candlestick_patterns_explained():
     return render_template("candlestick_patterns_explained.html")
 
+@app.route("/how_to_read_a_balance_sheet")
+def how_to_read_a_balance_sheet():
+    return render_template("how_to_read_a_balance_sheet.html")
+
+
+
 # ------------------------
 # SEO 文件（全部放这里）
 # ------------------------
