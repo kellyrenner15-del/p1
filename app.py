@@ -94,6 +94,11 @@ def candlestick_patterns_explained():
 def how_to_read_a_balance_sheet():
     return render_template("how_to_read_a_balance_sheet.html")
 
+@app.route("/how_to_read_an_income_statement")
+def how_to_read_an_income_statement():
+    return render_template("how_to_read_an_income_statement.html")
+
+
 
 
 # ------------------------
