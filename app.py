@@ -98,6 +98,9 @@ def how_to_read_a_balance_sheet():
 def how_to_read_an_income_statement():
     return render_template("how_to_read_an_income_statement.html")
 
+@app.route("/how_to_read_a_cash_flow_statement")
+def how_to_read_a_cash_flow_statement():
+    return render_template("how_to_read_a_cash_flow_statement.html")
 
 
 
