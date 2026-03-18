@@ -102,6 +102,9 @@ def how_to_read_an_income_statement():
 def how_to_read_a_cash_flow_statement():
     return render_template("how_to_read_a_cash_flow_statement.html")
 
+@app.route("/dividend_payout_ratio_explained")
+def dividend_payout_ratio_explained():
+    return render_template("dividend_payout_ratio_explained.html")
 
 
 # ------------------------
