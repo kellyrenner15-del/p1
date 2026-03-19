@@ -1,68 +1,302 @@
 {% extends "base.html" %}
 
-{% block title %}BPSとは？1株当たり純資産の見方 | Wuelefo{% endblock %}
-{% block description %}BPSとは何か、計算方法、初心者向けの見方、PBRとの関係をわかりやすく解説します。{% endblock %}
+{% block title %}bps（ベーシスポイント）とは？初心者向け完全解説 | Wuelefo{% endblock %}
+{% block description %}bps（ベーシスポイント）の意味、計算方法、実務での使い方を初心者向けに完全解説します。{% endblock %}
 {% block canonical %}https://wuelefo.com/what-is-bps{% endblock %}
+{% block og_title %}bpsとは？完全ガイド | Wuelefo{% endblock %}
+{% block og_description %}bps（ベーシスポイント）について初心者向けに分かりやすく解説。{% endblock %}
 {% block og_url %}https://wuelefo.com/what-is-bps{% endblock %}
-{% block og_title %}BPSとは？1株当たり純資産の見方 | Wuelefo{% endblock %}
-{% block og_description %}BPSの意味、計算式、PBRとの関係を初心者向けに整理します。{% endblock %}
 
 {% block content %}
 <section class="page">
-  <div class="page-head">
-    <h1>BPSとは？1株当たり純資産の見方</h1>
-    <p class="lead">
-      BPSは企業の純資産を1株あたりで表した指標です。
-      このページでは、BPSの意味、計算方法、PBRとの関係を初心者向けに解説します。
-    </p>
+  <!-- Hero Section -->
+  <div class="guide-hero">
+    <h1>bps（ベーシスポイント）とは？</h1>
+    <p class="page-lead">株式投資や金融ニュースでよく出てくる「bps」という単位。これが何を意味するのか、どう使うのかを初心者向けに完全解説します。</p>
+    <div class="guide-meta">
+      <span>📅 更新日: 2026年3月19日</span>
+      <span>⏱️ 読了時間: 約8分</span>
+      <span>📊 難易度: 初心者向け</span>
+    </div>
   </div>
 
-  <div class="card-box">
-    <h2>BPSとは何か</h2>
-    <p>
-      BPSとは「Book-value Per Share」の略で、日本語では1株当たり純資産と呼ばれます。
-      企業の純資産を発行済み株式数で割って求めます。
-    </p>
+  <!-- 目次 -->
+  <div class="card table-of-contents">
+    <h2>目次</h2>
+    <ul>
+      <li><a href="#section1">1. bpsの基本定義</a></li>
+      <li><a href="#section2">2. bpsの計算方法</a></li>
+      <li><a href="#section3">3. パー��ンテージとの違い</a></li>
+      <li><a href="#section4">4. 実務での使われ方</a></li>
+      <li><a href="#section5">5. 実践例で理解する</a></li>
+      <li><a href="#section6">6. よくある質問</a></li>
+    </ul>
+  </div>
 
-    <h2>BPSの計算式</h2>
-    <p>
-      BPS = 純資産 ÷ 発行済み株式数
-    </p>
+  <!-- Section 1 -->
+  <div class="card" id="section1">
+    <h2>1. bpsの基本定義</h2>
 
-    <p>
-      例えば、純資産が1,000億円、発行済み株式数が1億株なら、
-      BPSは1,000円です。
-    </p>
+    <h3>bpsとは</h3>
+    <p>bps は「Basis Points」の略で、日本語では「ベーシスポイント」と呼びます。</p>
 
-    <h2>BPSが大事な理由</h2>
-    <ul class="list">
-      <li>企業の資産価値を1株単位で見られる</li>
-      <li>PBRの計算に使われる</li>
-      <li>株価が純資産に対して高いか低いかを考える材料になる</li>
+    <div class="highlight-box">
+      <h4>📌 基本ルール</h4>
+      <p><strong>1bps = 0.01%</strong></p>
+      <p><strong>100bps = 1%</strong></p>
+      <p><strong>10,000bps = 100%</strong></p>
+    </div>
+
+    <h3>なぜbpsを使うのか？</h3>
+    <ul>
+      <li>✅ <strong>小数点以下の変化を表現しやすい</strong> - 「0.25%上昇」と言う代わりに「25bps上昇」と言える</li>
+      <li>✅ <strong>誤解を防ぐ</strong> - 「5%から6%」は「1%上昇」ではなく「5個のbps = 20%の相対上昇」</li>
+      <li>✅ <strong>金融業界の共通言語</strong> - 銀行や証券会社では当たり前の単位</li>
     </ul>
 
-    <h2>PBRとの関係</h2>
-    <p>
-      PBRは「株価 ÷ BPS」で求めます。
-      そのため、BPSが高いほど、同じ株価でもPBRは低くなります。
-      BPSはPBRを見るための基本になる数字です。
-    </p>
-
-    <h2>BPSを見る時のポイント</h2>
-    <ol class="list">
-      <li>過去より増えているか</li>
-      <li>純資産が減少していないか</li>
-      <li>赤字や財務悪化で大きく落ちていないか</li>
-      <li>PBRとセットで確認する</li>
-    </ol>
-
-    <h2>まとめ</h2>
-    <p>
-      BPSは企業の純資産価値を1株ごとに見やすくした指標です。
-      初心者はPBRだけを見るのではなく、BPSそのものが増えているかも確認すると、
-      企業の基礎体力を把握しやすくなります。
-    </p>
+    <h3>初心者が知るべきポイント</h3>
+    <p>bps は非常に小さい単位です。株式投資では主に以下の場面で出てきます：</p>
+    <ul>
+      <li>金利の変化（日銀が金利を25bps引き上げ）</li>
+      <li>スプレッド（銀行の手数料 = 100bps）</li>
+      <li>リターンの比較（ファンドのリターンが30bps低い）</li>
+    </ul>
   </div>
+
+  <!-- Section 2 -->
+  <div class="card" id="section2">
+    <h2>2. bpsの計算方法</h2>
+
+    <h3>bpsからパーセンテージへの変換</h3>
+
+    <div class="example-box">
+      <h4>📌 計算式</h4>
+      <p><strong>パーセンテージ(%) = bps ÷ 100</strong></p>
+      <p><strong>bps = パーセンテージ(%) × 100</strong></p>
+    </div>
+
+    <h3>具体例</h3>
+    <table style="width:100%; border-collapse:collapse; margin:15px 0;">
+      <tr style="background-color:#f0f0f0;">
+        <th style="padding:10px; border:1px solid #ddd;">bps</th>
+        <th style="padding:10px; border:1px solid #ddd;">パーセンテージ</th>
+        <th style="padding:10px; border:1px solid #ddd;">説明</th>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;"><strong>1bps</strong></td>
+        <td style="padding:10px; border:1px solid #ddd;">0.01%</td>
+        <td style="padding:10px; border:1px solid #ddd;">最小単位</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;"><strong>10bps</strong></td>
+        <td style="padding:10px; border:1px solid #ddd;">0.1%</td>
+        <td style="padding:10px; border:1px solid #ddd;">小さい変化</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;"><strong>25bps</strong></td>
+        <td style="padding:10px; border:1px solid #ddd;">0.25%</td>
+        <td style="padding:10px; border:1px solid #ddd;">よくある金利変化</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;"><strong>50bps</strong></td>
+        <td style="padding:10px; border:1px solid #ddd;">0.5%</td>
+        <td style="padding:10px; border:1px solid #ddd;">中程度の変化</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;"><strong>100bps</strong></td>
+        <td style="padding:10px; border:1px solid #ddd;">1%</td>
+        <td style="padding:10px; border:1px solid #ddd;">大きな変化</td>
+      </tr>
+    </table>
+
+    <h3>計算の例</h3>
+    <div class="example-box">
+      <h4>例1: 金利が25bps上昇した場合</h4>
+      <p>計算: 25 ÷ 100 = 0.25%上昇</p>
+      <p>意味: 金利が0.25%上がった</p>
+    </div>
+
+    <div class="example-box">
+      <h4>例2: リターンが300bps低い場合</h4>
+      <p>計算: 300 ÷ 100 = 3%低い</p>
+      <p>意味: 期待したリターンより3%低い</p>
+    </div>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="card" id="section3">
+    <h2>3. パーセンテージとの違い</h2>
+
+    <h3>よくある間違い</h3>
+    <p>「5%から6%に上昇した」と「5bpsから6bpsに上昇した」は全く違います。</p>
+
+    <div class="highlight-box" style="background: rgba(255, 107, 107, 0.1); border-left-color: #ff6b6b;">
+      <h4>❌ 間違い</h4>
+      <p>「5%から6%に上昇」= 「1%上昇」と思う</p>
+      <p><strong>実は：</strong>5%から6%への変化は「相対的には20%の上昇」です</p>
+    </div>
+
+    <h3>正確な理解</h3>
+    <table style="width:100%; border-collapse:collapse; margin:15px 0;">
+      <tr style="background-color:#f0f0f0;">
+        <th style="padding:10px; border:1px solid #ddd;">表現方法</th>
+        <th style="padding:10px; border:1px solid #ddd;">意味</th>
+        <th style="padding:10px; border:1px solid #ddd;">使い分け</th>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;"><strong>0.5%上昇</strong></td>
+        <td style="padding:10px; border:1px solid #ddd;">絶対値が0.5%増える</td>
+        <td style="padding:10px; border:1px solid #ddd;">大きな変化</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;"><strong>50bps上昇</strong></td>
+        <td style="padding:10px; border:1px solid #ddd;">絶対値が0.5%増える</td>
+        <td style="padding:10px; border:1px solid #ddd;">金融業界（同じ意味）</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;"><strong>10bps上昇</strong></td>
+        <td style="padding:10px; border:1px solid #ddd;">絶対値が0.1%増える</td>
+        <td style="padding:10px; border:1px solid #ddd;">小さな変化</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Section 4 -->
+  <div class="card" id="section4">
+    <h2>4. 実務での使われ方</h2>
+
+    <h3>金融ニュースでよく見る例</h3>
+
+    <h4>例1: 日銀の金利決定</h4>
+    <p>「日銀が政策金利を25bps引き上げることを決定」</p>
+    <ul>
+      <li>意味：金利を0.25%上げる</li>
+      <li>影響：銀行の金利が上がる、住宅ローンが高くなる</li>
+    </ul>
+
+    <h4>例2: ファンドのスプレッド</h4>
+    <p>「このファンドのスプレッドは100bps」</p>
+    <ul>
+      <li>意味：手数料が1%</li>
+      <li>影響：100万円投資すると1万円が手数料</li>
+    </ul>
+
+    <h4>例3: リターン比較</h4>
+    <p>「このファンドは市場平均より30bps低いリターン」</p>
+    <ul>
+      <li>意味：市場平均より0.3%低い</li>
+      <li>影響：長期投資では大きな差になる</li>
+    </ul>
+
+    <h3>株式投資での活用</h3>
+    <div class="highlight-box">
+      <ul>
+        <li>✅ <strong>手数料比較：</strong>証券会社の手数料をbpsで比較</li>
+        <li>✅ <strong>スプレッド確認：</strong>買値と売値の差がbps単位</li>
+        <li>✅ <strong>ファンド選択：</strong>低コストファンドを見つける</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Section 5 -->
+  <div class="card" id="section5">
+    <h2>5. 実践例で理解する</h2>
+
+    <h3>シナリオ1: 住宅ローン金利が上昇</h3>
+    <div class="example-box">
+      <p><strong>状況：</strong>日銀が金利を50bps引き上げた</p>
+      <ul>
+        <li>金利上昇：0.5%</li>
+        <li>ローン残高：3,000万円</li>
+        <li>年間の利息増加：3,000万円 × 0.5% = 15万円</li>
+      </ul>
+      <p>→ 毎月約1.25万円、家計負担が増える</p>
+    </div>
+
+    <h3>シナリオ2: 投資信託の手数料比較</h3>
+    <div class="example-box">
+      <p><strong>ファンドA：</strong>手数料 100bps（1%）</p>
+      <p><strong>ファンドB：</strong>手数料 25bps（0.25%）</p>
+      <p><strong>100万円投資した場合：</strong></p>
+      <ul>
+        <li>ファンドA：1万円の手数料</li>
+        <li>ファンドB：2,500円の手数料</li>
+        <li>差額：7,500円</li>
+      </ul>
+      <p>→ 長期投資では、この差が数百万円になることも</p>
+    </div>
+
+    <h3>シナリオ3: 株価指数の変化</h3>
+    <div class="example-box">
+      <p><strong>日経平均：</strong>前日比 150bps上昇</p>
+      <ul>
+        <li>上昇率：1.5%</li>
+        <li>日経平均が 30,000 円の場合：450円上昇</li>
+      </ul>
+      <p>→ 市況ニュースでは「150bps上昇」と表現される</p>
+    </div>
+  </div>
+
+  <!-- Section 6 -->
+  <div class="card" id="section6">
+    <h2>6. よくある質問（FAQ）</h2>
+
+    <div class="faq-item">
+      <h3>Q: なぜ金融業界はパーセンテージではなくbpsを使う？</h3>
+      <p>A: 小数点以下の変化が頻繁に起こるため、bps を使う方が簡潔で誤解が少ないからです。また、国際的な金融市場では bps が標準単位です。</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Q: 株価の変動もbpsで表現する？</h3>
+      <p>A: いいえ。株価の変動はパーセンテージで表現するのが一般的です。bps は主に「金利」「スプレッド」「リターン」で使われます。</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Q: 1bps の変化は実際にはどのくらい？</h3>
+      <p>A: 1bps = 0.01% です。100万円に対する 1bps は 100 円です。非常に小さい単位ですが、長期投資では積み重なると大きな差になります。</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Q: bps以外の単位がある？</h3>
+      <p>A: ベーシスポイントが最も一般的ですが、一部では「bp」（単数）と表現することもあります。意味は同じです。</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Q: 投資初心者は bps を理解する必要がある？</h3>
+      <p>A: ニュースを理解する上では必要です。特に金利動向や手数料比較をする時に重要になります。</p>
+    </div>
+  </div>
+
+  <!-- まとめ -->
+  <div class="card summary-card">
+    <h2>まとめ：bps の重要ポイント</h2>
+    <ul>
+      <li>✅ <strong>1bps = 0.01%</strong> - 基本ルール</li>
+      <li>✅ <strong>100bps = 1%</strong> - よく使われる単位</li>
+      <li>✅ <strong>金利の変化で使う</strong> - 「25bps引き上げ」など</li>
+      <li>✅ <strong>手数料比較に使う</strong> - ファンド選びの指標</li>
+      <li>✅ <strong>長期投資では大きな差</strong> - 数十bps の違いが数百万円に</li>
+    </ul>
+  </div>
+
+  <!-- 関連記事 -->
+  <div class="card related-articles">
+    <h2>関連記事を読む</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:15px; margin-top:15px;">
+      <a href="/beginner-guide" style="display:block; padding:15px; background:#fff; border:1px solid #ddd; border-radius:12px; text-decoration:none; color:#0f172a; transition:0.15s;">
+        <h4 style="margin:0 0 8px; color:#2563eb; font-size:14px;">初心者向けガイド</h4>
+        <p style="margin:0; font-size:12px; color:#475569;">投資の基礎を学ぶ</p>
+      </a>
+      <a href="/dividend_yield_explained" style="display:block; padding:15px; background:#fff; border:1px solid #ddd; border-radius:12px; text-decoration:none; color:#0f172a; transition:0.15s;">
+        <h4 style="margin:0 0 8px; color:#2563eb; font-size:14px;">配当利回りとは</h4>
+        <p style="margin:0; font-size:12px; color:#475569;">利回り計算の基礎</p>
+      </a>
+      <a href="/stock-risk-guide" style="display:block; padding:15px; background:#fff; border:1px solid #ddd; border-radius:12px; text-decoration:none; color:#0f172a; transition:0.15s;">
+        <h4 style="margin:0 0 8px; color:#2563eb; font-size:14px;">リスク分析ガイド</h4>
+        <p style="margin:0; font-size:12px; color:#475569;">安全な投資判断</p>
+      </a>
+    </div>
+  </div>
+
 </section>
 {% endblock %}
-

@@ -25,49 +25,67 @@
 <body>
 <header class="topbar">
   <div class="container topbar-inner">
-    <a class="brand" href="/">株式の基礎知識とツール</a>
-
+   <a class="brand" href="/">株式の基礎知識とツール</a>
     <!-- 手机菜单按钮 -->
     <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
 
-    <!-- 桌面导航 -->
+    <!-- 桌面导航 - 简化版 -->
     <nav class="nav-desktop">
       <a class="nav-link {% if request.path == '/' %}is-active{% endif %}" href="/">ホーム</a>
-      <a class="nav-link {% if request.path.startswith('/about') %}is-active{% endif %}" href="/about">このサイトについて</a>
-      <a class="nav-link {% if request.path.startswith('/contact') %}is-active{% endif %}" href="/contact">お問い合わせ</a>
-      <a class="nav-link {% if request.path.startswith('/privacy') %}is-active{% endif %}" href="/privacy">プライバシー</a>
-      <a class="nav-link {% if request.path.startswith('/terms') %}is-active{% endif %}" href="/terms">利用規約</a>
 
-      <!-- ✨ 新增：下拉菜单 -->
+      <!-- 基礎知識 下拉菜单 -->
       <div class="nav-dropdown">
-        <a class="nav-link nav-dropdown-toggle" href="#" id="indicatorsToggle">
-          株式指標ガイド
+        <a class="nav-link nav-dropdown-toggle" href="#" id="basicsToggle">
+          基礎知識
           <span class="dropdown-icon">▼</span>
         </a>
-        <div class="dropdown-menu" id="indicatorsMenu">
+        <div class="dropdown-menu" id="basicsMenu">
           <a href="/per-explained">PERとは?</a>
           <a href="/pbr-explained">PBRとは?</a>
           <a href="/roe-explained">ROEとは?</a>
           <a href="/what-is-eps">EPSとは?</a>
-          <a href="/what-is-bps">bpsとは何か？ </a>
-          <a href="/dividend_yield_explained">配当利回りとは？ </a>
-          <a href="/what_is_rsi">RSIとは？ </a>
-          <a href="/moving_average_explained">移動平均線とは？ </a>
-          <a href="/macd_explained">MACDとは？ </a>
-          <a href="bollinger_bands_explained">ボリンジャーバンドとは？ </a>
-          <a href="volume_analysis_explained">出来高分析とは？ </a>
-          <a href="support_and_resistance_explained">支持線と抵抗線とは？ </a>
-          <a href="candlestick_patterns_explained">ローソク足パターンとは？ </a>
-          <a href="how_to_read_a_balance_sheet">貸借対照表の見方 </a>
-          <a href="how_to_read_an_income_statement">損益計算書の見方 </a>
-          <a href="how_to_read_a_cash_flow_statement">キャッシュフロー計算書の見方 </a>
-          <a href="dividend_payout_ratio_explained">配当性向とは？ </a>
+          <a href="/what-is-bps">bpsとは何か？</a>
+          <a href="/dividend_yield_explained">配当利回りとは？</a>
+          <a href="/what_is_rsi">RSIとは？</a>
+          <a href="/moving_average_explained">移動平均線とは？</a>
+          <a href="/macd_explained">MACDとは？</a>
         </div>
       </div>
 
-      <a class="nav-link {% if request.path.startswith('/stock-risk-guide') %}is-active{% endif %}" href="/stock-risk-guide">銘柄リスク分析ガイド</a>
+      <!-- 実践ガイド 下拉菜单 -->
+      <div class="nav-dropdown">
+        <a class="nav-link nav-dropdown-toggle" href="#" id="guidesToggle">
+          実践ガイド
+          <span class="dropdown-icon">▼</span>
+        </a>
+        <div class="dropdown-menu" id="guidesMenu">
+          <a href="/beginner-guide">初心者向けガイド</a>
+          <a href="/stock-risk-guide">リスク分析ガイド</a>
+          <a href="bollinger_bands_explained">ボリンジャーバンドとは？</a>
+          <a href="volume_analysis_explained">出来高分析とは？</a>
+          <a href="support_and_resistance_explained">支持線と抵抗線とは？</a>
+          <a href="candlestick_patterns_explained">ローソク足パターンとは？</a>
+          <a href="how_to_read_a_balance_sheet">貸借対照表の見方</a>
+          <a href="how_to_read_an_income_statement">損益計算書の見方</a>
+          <a href="how_to_read_a_cash_flow_statement">キャッシュフロー計算書の見方</a>
+        </div>
+      </div>
+
+      <!-- その他 下拉菜单 -->
+      <div class="nav-dropdown">
+        <a class="nav-link nav-dropdown-toggle" href="#" id="otherToggle">
+          その他
+          <span class="dropdown-icon">▼</span>
+        </a>
+        <div class="dropdown-menu" id="otherMenu">
+          <a href="/about">このサイトについて</a>
+          <a href="/contact">お問い合わせ</a>
+          <a href="/privacy">プライバシー</a>
+          <a href="/terms">利用規約</a>
+        </div>
+      </div>
     </nav>
   </div>
 </header>
@@ -83,34 +101,49 @@
 
   <nav class="drawer-nav">
     <a href="/">ホーム</a>
-    <a href="/about">このサイトについて</a>
-    <a href="/contact">お問い合わせ</a>
-    <a href="/privacy">プライバシー</a>
-    <a href="/terms">利用規約</a>
-    <a href="/stock-risk-guide">銘柄リスク分析ガイド</a>
 
-    <!-- ✨ 新增：手机菜单中的指标下拉 -->
-    <div class="drawer-submenu-title">株式指標ガイド</div>
-    <div class="drawer-submenu">
-      <a href="/per-explained">PERとは?</a>
-      <a href="/pbr-explained">PBRとは?</a>
-      <a href="/roe-explained">ROEとは?</a>
-      <a href="/what-is-eps">EPSとは?</a>
-      <a href="/what-is-bps">bpsとは何か？ </a>
-      <a href="/dividend_yield_explained">配当利回りとは？ </a>
-      <a href="/what_is_rsi">RSIとは？ </a>
-      <a href="/moving_average_explained">移動平均線とは？ </a>
-      <a href="/macd_explained">MACDとは？ </a>
-      <a href="bollinger_bands_explained">ボリンジャーバンドとは？</a>
-      <a href="volume_analysis_explained">出来高分析とは？ </a>
-      <a href="support_and_resistance_explained">支持線と抵抗線とは？ </a>
-      <a href="candlestick_patterns_explained">ローソク足パターンとは？ </a>
-      <a href="how_to_read_a_balance_sheet">貸借対照表の見方 </a>
-      <a href="how_to_read_an_income_statement">損益計算書の見方 </a>
-      <a href="how_to_read_a_cash_flow_statement">キャッシュフロー計算書の見方 </a>
-      <a href="dividend_payout_ratio_explained">配当性向とは？ </a>
+    <!-- 基礎知識セクション -->
+    <div class="drawer-section">
+      <div class="drawer-section-title">基礎知識</div>
+      <div class="drawer-submenu">
+        <a href="/per-explained">PERとは?</a>
+        <a href="/pbr-explained">PBRとは?</a>
+        <a href="/roe-explained">ROEとは?</a>
+        <a href="/what-is-eps">EPSとは?</a>
+        <a href="/what-is-bps">bpsとは何か？</a>
+        <a href="/dividend_yield_explained">配当利回りとは？</a>
+        <a href="/what_is_rsi">RSIとは？</a>
+        <a href="/moving_average_explained">移動平均線とは？</a>
+        <a href="/macd_explained">MACDとは？</a>
+      </div>
     </div>
 
+    <!-- 実践ガイドセクション -->
+    <div class="drawer-section">
+      <div class="drawer-section-title">実践ガイド</div>
+      <div class="drawer-submenu">
+        <a href="/beginner-guide">初心者向けガイド</a>
+        <a href="/stock-risk-guide">リスク分析ガイド</a>
+        <a href="bollinger_bands_explained">ボリンジャーバンドとは？</a>
+        <a href="volume_analysis_explained">出来高分析とは？</a>
+        <a href="support_and_resistance_explained">支持線と抵抗線とは？</a>
+        <a href="candlestick_patterns_explained">ローソク足パターンとは？</a>
+        <a href="how_to_read_a_balance_sheet">貸借対照表の見方</a>
+        <a href="how_to_read_an_income_statement">損益計算書の見方</a>
+        <a href="how_to_read_a_cash_flow_statement">キャッシュフロー計算書の見方</a>
+      </div>
+    </div>
+
+    <!-- その他セクション -->
+    <div class="drawer-section">
+      <div class="drawer-section-title">その他</div>
+      <div class="drawer-submenu">
+        <a href="/about">このサイトについて</a>
+        <a href="/contact">お問い合わせ</a>
+        <a href="/privacy">プライバシー</a>
+        <a href="/terms">利用規約</a>
+      </div>
+    </div>
   </nav>
 </aside>
 
@@ -125,10 +158,9 @@
   </div>
 </footer>
 
-<!-- ✨ 新增：右下角 LINE 客服浮动按钮 -->
+<!-- ✨ LINE 客服浮动按钮 -->
 <a href="https://line.me/ti/p/tkJQSFZj2z" target="_blank" rel="noopener" class="floating-line-btn" title="LINE で質問する">
   <svg class="line-icon" viewBox="0 0 24 24" fill="currentColor">
-    <!-- LINE 官方对话气泡图标 -->
     <path d="M20.5 3H3.5C2.12 3 1 4.12 1 5.5v13C1 19.88 2.12 21 3.5 21h13.24l3.88 4v-4h.38C21.88 21 23 19.88 23 18.5v-13C23 4.12 21.88 3 20.5 3zm-11 9h-2v2h2v-2zm4-2h-2v4h2v-4zm4 2h-2v2h2v-2z"/>
   </svg>
   <span class="line-text">LINE</span>

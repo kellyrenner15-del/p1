@@ -12,19 +12,6 @@
     modal.setAttribute('aria-hidden', 'true');
   }
 
-  // ✅ 你要"根据客户实际输入动态显示"的地方：改这里即可
-  function makeBasicResult(input){
-    const v = (input || "").trim();
-    const hasNumber = /\d/.test(v);
-
-    // 这里先做演示规则：你未来换成 fetch 后端也就在这里换
-    return {
-      type: hasNumber ? `コード入力：${v}` : `名称入力：${v}`,
-      risk: hasNumber ? "中（参考）" : "低〜中（参考）",
-      note: "公開情報を元にした要約表示です。詳細はLINEで確認できます。"
-    };
-  }
-
   document.addEventListener('DOMContentLoaded', function () {
     const form = qs('stockForm');
     const q = qs('q');
@@ -44,30 +31,34 @@
     const miniForm = qs('miniSearch');
     const q2 = qs('q2');
 
-    if (!form || !q) return; // 非首页不跑
+    if (form && q) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
 
-    // ✅ 提交：显示基础结果（先给用户看到）
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
+        const v = (q.value || "").trim();
+        if(!v){
+          alert("キーワードを入力してください。");
+          return;
+        }
 
-      const v = (q.value || "").trim();
-      if(!v){
-        alert("キーワードを入力してください。");
-        return;
-      }
+        const r = {
+          type: /\d/.test(v) ? `コード入力：${v}` : `名称入力：${v}`,
+          risk: /\d/.test(v) ? "中（参考）" : "低〜中（参考）",
+          note: "公開情報を元にした要約表示です。詳細はLINEで確認できます。"
+        };
 
-      const r = makeBasicResult(v);
+        if (resultQuery) resultQuery.textContent = `入力：${v}`;
+        if (rType) rType.textContent = r.type;
+        if (rRisk) rRisk.textContent = r.risk;
+        if (rNote) rNote.textContent = r.note;
 
-      resultQuery.textContent = `入力：${v}`;
-      rType.textContent = r.type;
-      rRisk.textContent = r.risk;
-      rNote.textContent = r.note;
+        if (resultWrap) {
+          resultWrap.style.display = "block";
+          resultWrap.scrollIntoView({behavior:"smooth", block:"start"});
+        }
+      });
+    }
 
-      resultWrap.style.display = "block";
-      resultWrap.scrollIntoView({behavior:"smooth", block:"start"});
-    });
-
-    // ✅ 你之前按钮没反应：就靠这段绑定
     if (openLineModalBtn) {
       openLineModalBtn.addEventListener('click', function (e) {
         e.preventDefault();
@@ -75,7 +66,6 @@
       });
     }
 
-    // ✅ 关闭弹窗：遮罩 / X / ESC
     if (modal) {
       modal.addEventListener('click', function (e) {
         if (e.target && e.target.dataset && e.target.dataset.close === "1") {
@@ -87,24 +77,22 @@
       });
     }
 
-    // ✅ 重新输入
     if (resetBtn) {
       resetBtn.addEventListener('click', function(){
-        q.value = "";
-        q.focus();
-        resultWrap.style.display = "none";
+        if (q) q.value = "";
+        if (q) q.focus();
+        if (resultWrap) resultWrap.style.display = "none";
       });
     }
 
-    // ✅ mini 搜索框：把 q2 填回 q 并触发主表单
     if (miniForm && q2) {
       miniForm.addEventListener('submit', function(e){
         e.preventDefault();
         const v = (q2.value || "").trim();
         if(!v) return;
 
-        q.value = v;
-        form.requestSubmit(); // 触发主表单提交
+        if (q) q.value = v;
+        if (form) form.requestSubmit();
       });
     }
   });
@@ -124,7 +112,7 @@
     backdrop.hidden = false;
     drawer.setAttribute("aria-hidden", "false");
     btn.setAttribute("aria-expanded", "true");
-    document.body.style.overflow = "hidden"; // prevent background scroll
+    document.body.style.overflow = "hidden";
   };
 
   const close = () => {
@@ -147,60 +135,57 @@
     if (e.key === "Escape") close();
   });
 
-  // close after clicking any link
   drawer.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
 })();
 
-// ===== Desktop Dropdown Menu =====
+// ===== Desktop Dropdown Menus (支持多个下拉菜单) =====
 (function () {
-  const dropdownToggle = document.getElementById('indicatorsToggle');
-  const dropdown = document.querySelector('.nav-dropdown');
-  const dropdownMenu = document.getElementById('indicatorsMenu');
+  const dropdowns = document.querySelectorAll('.nav-dropdown');
 
-  if (!dropdownToggle || !dropdown || !dropdownMenu) return;
+  dropdowns.forEach((dropdown) => {
+    const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+    const menu = dropdown.querySelector('.dropdown-menu');
 
-  // 动态调整位置
-  function updateMenuPosition() {
-    const rect = dropdown.getBoundingClientRect();
+    if (!toggle || !menu) return;
 
-    dropdownMenu.style.left = rect.left + 'px';
-    dropdownMenu.style.top = (rect.bottom + 8) + 'px';
-  }
+    toggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      dropdown.classList.toggle('open');
 
-  // 切换下拉菜单
-  dropdownToggle.addEventListener('click', function (e) {
-    e.preventDefault();
-    dropdown.classList.toggle('open');
-    if (dropdown.classList.contains('open')) {
-      setTimeout(updateMenuPosition, 0);
-    }
-  });
+      // 关闭其他下拉菜单
+      dropdowns.forEach((other) => {
+        if (other !== dropdown) {
+          other.classList.remove('open');
+        }
+      });
+    });
 
-  // 点击菜单项后关闭
-  dropdownMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', function () {
-      dropdown.classList.remove('open');
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function () {
+        dropdown.classList.remove('open');
+      });
     });
   });
 
-  // 点击其他地方关闭下拉菜单
   document.addEventListener('click', function (e) {
-    if (!dropdown.contains(e.target)) {
-      dropdown.classList.remove('open');
+    if (!e.target.closest('.nav-dropdown')) {
+      dropdowns.forEach((dropdown) => {
+        dropdown.classList.remove('open');
+      });
     }
   });
 
-  // ESC 键关闭
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
-      dropdown.classList.remove('open');
+      dropdowns.forEach((dropdown) => {
+        dropdown.classList.remove('open');
+      });
     }
   });
 
-  // 监听窗口大小变化
   window.addEventListener('resize', function () {
-    if (dropdown.classList.contains('open')) {
-      updateMenuPosition();
-    }
+    dropdowns.forEach((dropdown) => {
+      dropdown.classList.remove('open');
+    });
   });
 })();

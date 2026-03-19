@@ -1,64 +1,331 @@
 {% extends "base.html" %}
 
-{% block title %}RSIとは？初心者向け基礎解説 | Wuelefo{% endblock %}
-{% block description %}RSIとは何か、使い方、買われすぎ・売られすぎの見方を初心者向けにわかりやすく解説します。{% endblock %}
+{% block title %}RSI（相対力指数）とは？計算方法から使い方まで完全解説 | Wuelefo{% endblock %}
+{% block description %}RSI（相対力指数）の意味、計算方法、買いシグナル・売りシグナル、実践での使い方を初心者向けに完全解説します。{% endblock %}
 {% block canonical %}https://wuelefo.com/what-is-rsi{% endblock %}
+{% block og_title %}RSIとは？完全ガイド | Wuelefo{% endblock %}
+{% block og_description %}RSI（相対力指数）について初心者向けに分かりやすく解説。テクニカル分析の基本指標。{% endblock %}
 {% block og_url %}https://wuelefo.com/what-is-rsi{% endblock %}
-{% block og_title %}RSIとは？初心者向け基礎解説 | Wuelefo{% endblock %}
-{% block og_description %}RSIの意味、基本的な使い方、注意点を初心者向けに整理します。{% endblock %}
 
 {% block content %}
 <section class="page">
-  <div class="page-head">
-    <h1>RSIとは？初心者向け基礎解説</h1>
-    <p class="lead">
-      RSIは株価の値動きの勢いを見るためのテクニカル指標です。
-      このページでは、RSIの意味、基本的な見方、注意点を初心者向けに解説します。
-    </p>
+  <!-- Hero Section -->
+  <div class="guide-hero">
+    <h1>RSI（相対力指数）とは？</h1>
+    <p class="page-lead">テクニカル分析の中で最も使われている「RSI」。買いのタイミングと売りのタイミングを判断する強力な指標です。初心者向けに完全解説します。</p>
+    <div class="guide-meta">
+      <span>📅 更新日: 2026年3月19日</span>
+      <span>⏱️ 読了時間: 約12分</span>
+      <span>📊 難易度: 初心者向け</span>
+    </div>
   </div>
 
-  <div class="card-box">
-    <h2>RSIとは何か</h2>
-    <p>
-      RSIとは「Relative Strength Index」の略で、日本語では相対力指数と呼ばれます。
-      一定期間の値上がり幅と値下がり幅を比べて、
-      買われすぎ・売られすぎの目安を示す指標です。
-    </p>
+  <!-- 目次 -->
+  <div class="card table-of-contents">
+    <h2>目次</h2>
+    <ul>
+      <li><a href="#section1">1. RSIの基本定義</a></li>
+      <li><a href="#section2">2. RSIの計算方法</a></li>
+      <li><a href="#section3">3. RSIの見方</a></li>
+      <li><a href="#section4">4. 買いシグナル・売りシグナル</a></li>
+      <li><a href="#section5">5. RSIの注意点</a></li>
+      <li><a href="#section6">6. 実践例で理解する</a></li>
+      <li><a href="#section7">7. よくある質問</a></li>
+    </ul>
+  </div>
 
-    <h2>RSIの基本的な見方</h2>
-    <ul class="list">
-      <li>一般的に70以上は買われすぎの目安</li>
-      <li>一般的に30以下は売られすぎの目安</li>
-      <li>ただし相場が強い時は高いまま続くこともあります</li>
+  <!-- Section 1 -->
+  <div class="card" id="section1">
+    <h2>1. RSIの基本定義</h2>
+
+    <h3>RSIとは</h3>
+    <p>RSI は「Relative Strength Index」の略で、日本語では「相対力指数」と呼びます。</p>
+
+    <div class="highlight-box">
+      <h4>📌 RSI の役割</h4>
+      <p><strong>「株価が買われすぎ（過熱）か、売られ��ぎ（過度に安い）か」を判断する指標</strong></p>
+    </div>
+
+    <h3>RSI の数値範囲</h3>
+    <ul>
+      <li>✅ <strong>0～100 の数値</strong>で表示される</li>
+      <li>✅ <strong>70% 以上：</strong>買われすぎ（売り場面の可能性）</li>
+      <li>✅ <strong>30% 以下：</strong>売られすぎ（買い場面の可能性）</li>
+      <li>✅ <strong>30～70%：</strong>中立的な状態</li>
     </ul>
 
-    <h2>RSIだけで判断してはいけない理由</h2>
-    <p>
-      RSIは便利ですが、単独で売買判断をするとだましも多いです。
-      トレンドの強さ、出来高、企業業績なども合わせて確認するのが基本です。
-    </p>
+    <h3>なぜ RSI が重要か</h3>
+    <ul>
+      <li>✅ <strong>買い場・売り場を判断できる</strong></li>
+      <li>✅ <strong>トレンドの転換点を見つけられる</strong></li>
+      <li>✅ <strong>他の指標と組み合わせると精度が上がる</strong></li>
+      <li>✅ <strong>初心者でも簡単に使える</strong></li>
+    </ul>
 
-    <h2>初心者向けの使い方</h2>
-    <ol class="list">
-      <li>まずは70・30を目安に見る</li>
-      <li>他の指標やチャートパターンと組み合わせる</li>
-      <li>強い上昇相場では高いRSIが続くこともあると理解する</li>
-      <li>短期指標なので企業分析とは別物と考える</li>
+    <h3>初心者が知るべきポイント</h3>
+    <p>RSI は「逆張り（トレンドの反対方向に取引）」のための指標です。つまり、高すぎたら売る、低すぎたら買うというシンプルな判断が可能です。</p>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="card" id="section2">
+    <h2>2. RSIの計算方法</h2>
+
+    <h3>計算式（初心者向け簡易版）</h3>
+    <div class="example-box">
+      <h4>📌 基本的な考え方</h4>
+      <p><strong>RSI = 上昇幅 ÷ （上昇幅 + 下降幅） × 100</strong></p>
+      <p>※ 通常は 14 日間のデータで計算</p>
+    </div>
+
+    <h3>計算の流れ</h3>
+    <ol>
+      <li>過去 14 日間の日足の上昇日の値幅を合計（平均上昇幅）</li>
+      <li>過去 14 日間の日足の下降日の値幅を合計（平均下降幅）</li>
+      <li>上式に当てはめて計算</li>
     </ol>
 
-    <h2>注意点</h2>
-    <p>
-      RSIは短期的な値動きの勢いを見る指標なので、
-      企業の価値そのものを示すものではありません。
-      ファンダメンタルズ分析と分けて考えることが大切です。
-    </p>
+    <h3>実際の計算例</h3>
+    <div class="example-box">
+      <h4>例：14日間のデータから RSI を計算</h4>
+      <ul>
+        <li>平均上昇幅：30円</li>
+        <li>平均下降幅：20円</li>
+        <li>計算：30 ÷ （30 + 20）× 100 = 60%</li>
+        <li>意味：RSI = 60% → 中立的だが、やや買われている状態</li>
+      </ul>
+    </div>
 
-    <h2>まとめ</h2>
-    <p>
-      RSIは初心者でも理解しやすいテクニカル指標ですが、
-      単独ではなく、トレンドや企業情報と合わせて使うことで
-      より実践的な判断がしやすくなります。
-    </p>
+    <h3>重要なポイント</h3>
+    <p>実際には、ほとんどの証券会社がチャートに RSI を自動計算して表示してくれます。初心者は計算方法よりも、「何を示しているか」を理解することが大切です。</p>
   </div>
+
+  <!-- Section 3 -->
+  <div class="card" id="section3">
+    <h2>3. RSIの見方</h2>
+
+    <h3>RSI の 3 ゾーン</h3>
+    <table style="width:100%; border-collapse:collapse; margin:15px 0;">
+      <tr style="background-color:#f0f0f0;">
+        <th style="padding:10px; border:1px solid #ddd;">RSI 水準</th>
+        <th style="padding:10px; border:1px solid #ddd;">状態</th>
+        <th style="padding:10px; border:1px solid #ddd;">対策</th>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;"><strong>70% 以上</strong></td>
+        <td style="padding:10px; border:1px solid #ddd;">買われすぎ</td>
+        <td style="padding:10px; border:1px solid #ddd;">売却を検討</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;"><strong>30～70%</strong></td>
+        <td style="padding:10px; border:1px solid #ddd;">中立</td>
+        <td style="padding:10px; border:1px solid #ddd;">他の指標を参考に</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;"><strong>30% 以下</strong></td>
+        <td style="padding:10px; border:1px solid #ddd;">売られすぎ</td>
+        <td style="padding:10px; border:1px solid #ddd;">購入を検討</td>
+      </tr>
+    </table>
+
+    <h3>具体的な見方</h3>
+
+    <h4>① RSI が 70% を超えた場合</h4>
+    <div class="highlight-box" style="background: rgba(255, 107, 107, 0.1); border-left-color: #ff6b6b;">
+      <p><strong>状態：買われすぎ</strong></p>
+      <ul>
+        <li>株価が上昇しすぎている</li>
+        <li>そろそろ売却圧力が出てくる可能性</li>
+        <li>短期的には下落のリスク</li>
+      </ul>
+      <p><strong>対策：</strong>売却か、利益確定を検討</p>
+    </div>
+
+    <h4>② RSI が 30% 以下の場合</h4>
+    <div class="highlight-box" style="background: rgba(34, 197, 94, 0.1); border-left-color: #22c55e;">
+      <p><strong>状態：売られすぎ</strong></p>
+      <ul>
+        <li>株価が下がりすぎている</li>
+        <li>買い直しの圧力が出てくる可能性</li>
+        <li>短期的には上昇の余地あり</li>
+      </ul>
+      <p><strong>対策：</strong>購入か、追加購入を検討</p>
+    </div>
+
+    <h4>③ RSI が 30～70% の場合</h4>
+    <div class="highlight-box">
+      <p><strong>状態：中立的</strong></p>
+      <ul>
+        <li>特に極端な状態ではない</li>
+        <li>トレンドの方向を判断する必要</li>
+        <li>他の指標を組み合わせて判断</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Section 4 -->
+  <div class="card" id="section4">
+    <h2>4. 買いシグナル・売りシグナル</h2>
+
+    <h3>主なシグナル</h3>
+
+    <h4>✅ 買いシグナル</h4>
+    <div class="highlight-box" style="background: rgba(34, 197, 94, 0.1); border-left-color: #22c55e;">
+      <ul>
+        <li><strong>RSI が 30% 以下から上昇に転じた</strong> - 売られすぎから回復する合図</li>
+        <li><strong>RSI が 50% を上に突き抜ける</strong> - 上昇トレンドへの転換</li>
+        <li><strong>RSI が 40～60% で推移</strong> - 安定した買い圧力</li>
+      </ul>
+    </div>
+
+    <h4>❌ 売りシグナル</h4>
+    <div class="highlight-box" style="background: rgba(255, 107, 107, 0.1); border-left-color: #ff6b6b;">
+      <ul>
+        <li><strong>RSI が 70% 以上から下降に転じた</strong> - 買われすぎから調整する合図</li>
+        <li><strong>RSI が 50% を下に突き抜ける</strong> - 下降トレンドへの転換</li>
+        <li><strong>RSI が 80% を超える</strong> - 極度に買われすぎている</li>
+      </ul>
+    </div>
+
+    <h3>ダイバージェンス（重要！）</h3>
+    <p>ダイバージェンスとは、株価と RSI が反対方向に動くことです。これは非常に重要なシグナルです。</p>
+
+    <div class="example-box">
+      <h4>📌 ダイバージェンスの例</h4>
+      <ul>
+        <li>株価は上昇しているのに、RSI は下降している</li>
+        <li>意味：上昇の勢いが弱まっている（売却近し）</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Section 5 -->
+  <div class="card" id="section5">
+    <h2>5. RSIの注意点</h2>
+
+    <h3>RSI の落とし穴</h3>
+
+    <h4>① RSI が高いまま上昇し続けることもある</h4>
+    <div class="highlight-box" style="background: rgba(255, 200, 87, 0.1); border-left-color: #ffc857;">
+      <p><strong>注意：</strong> 強気相場では、RSI が 70% を超えたままずっと上昇することもあります。つまり、「70% を超えたら必ず売る」は間違いです。</p>
+    </div>
+
+    <h4>② トレン��の強さには対応できない</h4>
+    <p>RSI は「買われすぎ/売られすぎ」を示しますが、トレンドの強さまでは示しません。つまり、強いトレンドの途中でシグナルに従���と損失を出すことも。</p>
+
+    <h4>③ 短期的な変動に反応しすぎる</h4>
+    <p>RSI は短期の価格変動に敏感です。1 日の変動で大きく変わるため、スイングトレード向きですが、長期投資には不向きです。</p>
+
+    <h3>RSI を上手に使うコツ</h3>
+    <ul>
+      <li>✅ <strong>単独では使わない</strong> - 他の指標（移動平均線など）と組み合わせる</li>
+      <li>✅ <strong>トレンドを確認する</strong> - 上昇トレンド中なら高めの水準でも買い続く</li>
+      <li>✅ <strong>期間を調整する</strong> - 14日以外に21日や9日も試す</li>
+      <li>✅ <strong>複数のシグナルを待つ</strong> - RSI だけでなく、価格の動きも確認</li>
+    </ul>
+  </div>
+
+  <!-- Section 6 -->
+  <div class="card" id="section6">
+    <h2>6. 実践例で理解する</h2>
+
+    <h3>シナリオ1：明確な買いシグナル</h3>
+    <div class="example-box">
+      <h4>チャートの動き</h4>
+      <ul>
+        <li>Day 1-5: 株価下落 → RSI は 20% まで低下</li>
+        <li>Day 6: 株価が反発 → RSI が 30% を上回る</li>
+        <li>Day 7-10: 株価続伸 → RSI が 50% を上に突き抜ける</li>
+      </ul>
+      <h4>判定</h4>
+      <p>→ <strong>買いシグナル確定！</strong> この時点で購入するのは正しい判断</p>
+    </div>
+
+    <h3>シナリオ2：売りシグナルの罠</h3>
+    <div class="example-box">
+      <h4>チャートの動き</h4>
+      <ul>
+        <li>Day 1-5: 株価上昇 → RSI は 75% に達する</li>
+        <li>Day 6: 「RSI が高い＝売り」と判断して売却</li>
+        <li>Day 7-15: しかし株価はさらに上昇し続ける</li>
+        <li>結果：売却後に 10% 以上の値上がりを逃す</li>
+      </ul>
+      <h4>判定</h4>
+      <p>→ <strong>RSI だけで判断するのは危険！</strong> トレンドの確認が必須</p>
+    </div>
+
+    <h3>シナリオ3：ダイバージェンスの重要性</h3>
+    <div class="example-box">
+      <h4>チャートの動き</h4>
+      <ul>
+        <li>株価：高値更新を続けている</li>
+        <li>RSI：しかし下降している（70% → 60%）</li>
+      </ul>
+      <h4>判定</h4>
+      <p>→ <strong>売却シグナル！</strong> 上昇の勢いが弱まっている危険信号</p>
+    </div>
+  </div>
+
+  <!-- Section 7 -->
+  <div class="card" id="section7">
+    <h2>7. よくある質問（FAQ）</h2>
+
+    <div class="faq-item">
+      <h3>Q: RSI の計算期間は 14 日が最適？</h3>
+      <p>A: いいえ。9日、21日など他の期間も使われます。短期トレードなら9日、長期なら21日など、投資スタイルに合わせて調整してください。</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Q: RSI が 50% は何を意味する？</h3>
+      <p>A: 完全に中立的な状態です。上昇と下降の力が同じくらいということです。</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Q: RSI だけで投資判断をしてもいい？</h3>
+      <p>A: いいえ。RSI は補助的な指標です。必ず他の指標（移動平均線、MACD など）と組み合わせてください。</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Q: RSI が 100% になることはある？</h3>
+      <p>A: 理論的には 100% になる可能性はありますが、実際にはほとんど見られません。通常は 80～90% で頭打ちになります。</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Q: デイトレード向き？それとも長期投資向き？</h3>
+      <p>A: デイトレード向きです。短期の過度な変動を捉える指標なので、1 ヶ月以上の長期投資にはあまり向いていません。</p>
+    </div>
+  </div>
+
+  <!-- まとめ -->
+  <div class="card summary-card">
+    <h2>まとめ：RSI の重要ポイント</h2>
+    <ul>
+      <li>✅ <strong>0～100 で表示</strong>される指標</li>
+      <li>✅ <strong>70% 以上 = 買われすぎ</strong>（売却検討）</li>
+      <li>✅ <strong>30% 以下 = 売られすぎ</strong>（購入検討）</li>
+      <li>✅ <strong>ダイバージェンスに注目</strong>（重要シグナル）</li>
+      <li>✅ <strong>他の指標と組み合わせる</strong>（単独では危険）</li>
+      <li>✅ <strong>短期トレード向き</strong>（長期投資には不向き）</li>
+    </ul>
+  </div>
+
+  <!-- 関連記事 -->
+  <div class="card related-articles">
+    <h2>関連記事を読む</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:15px; margin-top:15px;">
+      <a href="/moving_average_explained" style="display:block; padding:15px; background:#fff; border:1px solid #ddd; border-radius:12px; text-decoration:none; color:#0f172a; transition:0.15s;">
+        <h4 style="margin:0 0 8px; color:#2563eb; font-size:14px;">移動平均線とは</h4>
+        <p style="margin:0; font-size:12px; color:#475569;">トレンド判断の基本</p>
+      </a>
+      <a href="/macd_explained" style="display:block; padding:15px; background:#fff; border:1px solid #ddd; border-radius:12px; text-decoration:none; color:#0f172a; transition:0.15s;">
+        <h4 style="margin:0 0 8px; color:#2563eb; font-size:14px;">MACDとは</h4>
+        <p style="margin:0; font-size:12px; color:#475569;">トレンド転換の指標</p>
+      </a>
+      <a href="/stock-risk-guide" style="display:block; padding:15px; background:#fff; border:1px solid #ddd; border-radius:12px; text-decoration:none; color:#0f172a; transition:0.15s;">
+        <h4 style="margin:0 0 8px; color:#2563eb; font-size:14px;">リスク分析ガイド</h4>
+        <p style="margin:0; font-size:12px; color:#475569;">安全な投資判断</p>
+      </a>
+    </div>
+  </div>
+
 </section>
 {% endblock %}

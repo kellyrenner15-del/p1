@@ -392,7 +392,7 @@ h1,h2,h3{ letter-spacing:-.02em; }
 }
 .modal-panel{
   position: relative;
-  width: min(520px, calc(100% - 28px));
+  width: min(480px, calc(100% - 28px));
   margin: 60px auto;
   background: #0b1220;
   border: 1px solid rgba(255,255,255,.10);
@@ -405,7 +405,7 @@ h1,h2,h3{ letter-spacing:-.02em; }
   align-items:center;
   justify-content:space-between;
   padding: 14px 16px;
-  background: #2f59ff;
+  background: linear-gradient(135deg, #ff9500, #ff6b00);
   color: #fff;
 }
 .modal-title{
@@ -446,7 +446,7 @@ h1,h2,h3{ letter-spacing:-.02em; }
   filter: brightness(.98);
 }
 
-/* ===== Dropdown Menu Styles ===== */
+/* ===== Dropdown Menu Styles - 多个下拉菜单支持 ===== */
 .nav-dropdown {
   position: relative;
   display: inline-block;
@@ -457,6 +457,7 @@ h1,h2,h3{ letter-spacing:-.02em; }
   align-items: center;
   gap: 6px;
   position: relative;
+  cursor: pointer;
 }
 
 .dropdown-icon {
@@ -473,13 +474,13 @@ h1,h2,h3{ letter-spacing:-.02em; }
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 12px;
-  box-shadow: 0 12px 32px rgba(2,6,23,.15);
-  min-width: 200px;
+  box-shadow: 0 12px 32px rgba(2, 6, 23, 0.15);
+  min-width: 180px;
   display: none;
   flex-direction: column;
   z-index: 1000;
   overflow: hidden;
-  max-height: 300px;
+  max-height: 400px;
   overflow-y: auto;
 }
 
@@ -526,35 +527,50 @@ h1,h2,h3{ letter-spacing:-.02em; }
   background: rgba(37, 99, 235, 0.5);
 }
 
-/* Mobile drawer submenu styles */
-.drawer-submenu-title {
+/* ===== 手机版菜单分类样式 ===== */
+.drawer-section {
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.drawer-section:last-child {
+  border-bottom: none;
+}
+
+.drawer-section-title {
   padding: 10px 12px;
   font-weight: 700;
   color: var(--text);
-  font-size: 13px;
-  margin-top: 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+  opacity: 0.7;
 }
 
 .drawer-submenu {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  padding-left: 12px;
-  margin-bottom: 6px;
+  gap: 0;
+  padding-left: 0;
+  margin-bottom: 0;
 }
 
 .drawer-submenu a {
   text-decoration: none;
-  color: var(--muted);
-  padding: 8px 12px;
-  border-radius: 10px;
-  font-size: 13px;
+  color: #111;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
   transition: 0.15s;
+  border-left: 3px solid transparent;
 }
 
 .drawer-submenu a:hover {
-  background: rgba(37,99,235,.10);
-  color: var(--text);
+  background: rgba(37, 99, 235, 0.1);
+  border-left-color: var(--accent);
+  color: var(--accent);
+  padding-left: 15px;
 }
 
 /* responsive */
