@@ -12,8 +12,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- ✅ 改过的 5 个文章 - 改成 2026-03-19 -->
   <url>
     <loc>https://wuelefo.com/per-explained</loc>
     <lastmod>2026-03-19</lastmod>
@@ -32,16 +30,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- ❌ 没改过的 - 保持原日期 -->
   <url>
     <loc>https://wuelefo.com/what-is-eps</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- ✅ 改过的 -->
   <url>
     <loc>https://wuelefo.com/what-is-bps</loc>
     <lastmod>2026-03-19</lastmod>
@@ -60,8 +54,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- ❌ 没改过的 - 保持原日期 -->
   <url>
     <loc>https://wuelefo.com/moving_average_explained</loc>
     <lastmod>2026-03-10</lastmod>
@@ -74,16 +66,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- ✅ 改过的 -->
   <url>
     <loc>https://wuelefo.com/stock-risk-guide</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- ❌ 没改过的 - 保持原日期 -->
   <url>
     <loc>https://wuelefo.com/bollinger_bands_explained</loc>
     <lastmod>2026-03-10</lastmod>
