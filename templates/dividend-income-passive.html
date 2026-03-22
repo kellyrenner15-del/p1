@@ -1,0 +1,419 @@
+{% extends "base.html" %}
+
+{% block title %}配当金で不労所得を作る方法｜初心者向け完全ガイド | Wuelefo{% endblock %}
+{% block description %}株式投資の配当金で不労所得を作る方法を初心者向けに完全解説。配当金の仕組み、銘柄選び、税金まで。{% endblock %}
+{% block canonical %}https://wuelefo.com/dividend-income-passive{% endblock %}
+{% block og_title %}配当金で不労所得を作る方法｜完全ガイド | Wuelefo{% endblock %}
+{% block og_description %}配当金投資で安定した不労所得を得る方法を初心者向けに分かりやすく解説。{% endblock %}
+{% block og_url %}https://wuelefo.com/dividend-income-passive{% endblock %}
+
+{% block content %}
+<section class="page">
+  <!-- Hero Section -->
+  <div class="guide-hero">
+    <h1>配当金で不労所得を作る方法｜初心者向け完全ガイド</h1>
+    <p class="page-lead">株式投資で「働かずに得る収入」を実現する配当金投資。その仕組みから銘柄選び、税金対策まで、初心者が知っておくべきすべてを完全解説します。</p>
+    <div class="guide-meta">
+      <span>📅 更新日: 2026年3月22日</span>
+      <span>⏱️ 読了時間: 約12分</span>
+      <span>📊 難易度: 初心者向け</span>
+    </div>
+  </div>
+
+  <!-- 目次 -->
+  <div class="card table-of-contents">
+    <h2>目次</h2>
+    <ul>
+      <li><a href="#section1">1. 配当金とは何か</a></li>
+      <li><a href="#section2">2. 配当金の仕組みと種類</a></li>
+      <li><a href="#section3">3. 配当利回りの計算方法</a></li>
+      <li><a href="#section4">4. 配当金で不労所得を作る戦略</a></li>
+      <li><a href="#section5">5. 高配当銘柄の選び方</a></li>
+      <li><a href="#section6">6. 配当金の税金対策</a></li>
+      <li><a href="#section7">7. 実践例とシミュレーション</a></li>
+      <li><a href="#section8">8. よくある質問</a></li>
+    </ul>
+  </div>
+
+  <!-- Section 1 -->
+  <div class="card" id="section1">
+    <h2>1. 配当金とは何か</h2>
+
+    <h3>配当金の基本定義</h3>
+    <div class="highlight-box">
+      <h4>📌 配当金とは</h4>
+      <p><strong>企業が得た利益の一部を、株主に分配するお金</strong></p>
+      <p>つまり、あなたが株を持っているだけで、企業が稼いだお金の一部をもらえるということです。</p>
+    </div>
+
+    <h3>不労所得の最たる例</h3>
+    <div class="example-box">
+      <h4>📌 わかりやすい例</h4>
+      <p>銀行に 100 万円を預金すると金利がもらえますよね？それと同じです。</p>
+      <ul>
+        <li>銀行：預金 × 金利 = 利息</li>
+        <li>株式：株式保有 × 配当利回り = 配当金</li>
+      </ul>
+      <p>→ 銀行より圧倒的に高い利回りで、不労所得を得られます</p>
+    </div>
+
+    <h3>配当金がもらえる条件</h3>
+    <ul>
+      <li>✅ <strong>配当金を出している企業の株を保有する</strong></li>
+      <li>✅ <strong>配当の基準日に株を保有している</strong></li>
+      <li>✅ <strong>権利確定日を確認する</strong> - この日までに保有が必須</li>
+    </ul>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="card" id="section2">
+    <h2>2. 配当金の仕組みと種類</h2>
+
+    <h3>配当金の支払いスケジュール</h3>
+    <div class="example-box">
+      <h4>📌 配当の流れ（例：年 2 回配当の場合）</h4>
+      <ol>
+        <li>企業が決算を発表</li>
+        <li>「配当を出す」と決定</li>
+        <li>権利確定日を設定（この日までに保有で配当を受け取る権利獲得）</li>
+        <li>配当金が銀行口座に振り込まれる</li>
+      </ol>
+    </div>
+
+    <h3>配当の種類</h3>
+    <table style="width:100%; border-collapse:collapse; margin:15px 0;">
+      <tr style="background-color:#f0f0f0;">
+        <th style="padding:10px; border:1px solid #ddd;">種類</th>
+        <th style="padding:10px; border:1px solid #ddd;">説明</th>
+        <th style="padding:10px; border:1px solid #ddd;">例</th>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;"><strong>通常配当</strong></td>
+        <td style="padding:10px; border:1px solid #ddd;">毎期定期的に出す配当</td>
+        <td style="padding:10px; border:1px solid #ddd;">年 2 回、各 50 円</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;"><strong>特別配当</strong></td>
+        <td style="padding:10px; border:1px solid #ddd;">特別な利益が出た時のみ</td>
+        <td style="padding:10px; border:1px solid #ddd;">好決算時に追加 100 円</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;"><strong>中間配当</strong></td>
+        <td style="padding:10px; border:1px solid #ddd;">半期ごとの配当</td>
+        <td style="padding:10px; border:1px solid #ddd;">6 月に 30 円、12 月に 30 円</td>
+      </tr>
+    </table>
+
+    <h3>配当と株主優待の違い</h3>
+    <ul>
+      <li>🏦 <strong>配当金：</strong>現金でもらう</li>
+      <li>🎁 <strong>株主優待：</strong>商品やサービスでもらう</li>
+      <li>💡 <strong>コツ：</strong>両方狙える銘柄も多い！</li>
+    </ul>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="card" id="section3">
+    <h2>3. 配当利回りの計算方法</h2>
+
+    <h3>基本の計算式</h3>
+    <div class="example-box">
+      <h4>📌 配当利回りの計算式</h4>
+      <p><strong>配当利回り (%) = (年間配当金 ÷ 株価) × 100</strong></p>
+    </div>
+
+    <h3>具体的な計算例</h3>
+    <div class="example-box">
+      <h4>例 1：高配当株 A 社</h4>
+      <ul>
+        <li>株価：1,000 円</li>
+        <li>年間配当：100 円（50 円 × 2 回）</li>
+        <li>計算：(100 ÷ 1,000) × 100 = 10%</li>
+        <li>意味：100 万円投資すると、年間 10 万円の配当がもらえる</li>
+      </ul>
+    </div>
+
+    <div class="example-box">
+      <h4>例 2：安定配当株 B 社</h4>
+      <ul>
+        <li>株価：5,000 円</li>
+        <li>年間配当：150 円</li>
+        <li>計算：(150 ÷ 5,000) × 100 = 3%</li>
+        <li>意味：100 万円投資すると、年間 3 万円の配当</li>
+      </ul>
+    </div>
+
+    <h3>利回りの目安</h3>
+    <table style="width:100%; border-collapse:collapse; margin:15px 0;">
+      <tr style="background-color:#f0f0f0;">
+        <th style="padding:10px; border:1px solid #ddd;">利回り</th>
+        <th style="padding:10px; border:1px solid #ddd;">評価</th>
+        <th style="padding:10px; border:1px solid #ddd;">特徴</th>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;"><strong>2% 以下</strong></td>
+        <td style="padding:10px; border:1px solid #ddd;">低い</td>
+        <td style="padding:10px; border:1px solid #ddd;">成長株が多い</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;"><strong>2～5%</strong></td>
+        <td style="padding:10px; border:1px solid #ddd;">標準的</td>
+        <td style="padding:10px; border:1px solid #ddd;">バランス型投資向け</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;"><strong>5～7%</strong></td>
+        <td style="padding:10px; border:1px solid #ddd;">高い</td>
+        <td style="padding:10px; border:1px solid #ddd;">高配当株</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;"><strong>7% 以上</strong></td>
+        <td style="padding:10px; border:1px solid #ddd;">非常に高い</td>
+        <td style="padding:10px; border:1px solid #ddd;">⚠️ 要注意（下落リスク）</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Section 4 -->
+  <div class="card" id="section4">
+    <h2>4. 配当金で不労所得を作る戦略</h2>
+
+    <h3>戦略１：複利効果を活用</h3>
+    <div class="highlight-box" style="background: rgba(34, 197, 94, 0.1); border-left-color: #22c55e;">
+      <h4>✅ 配当再投資戦略</h4>
+      <p>受け取った配当金で新しく株を買う = 雪だるま式に資産が増える</p>
+      <ul>
+        <li>年 1：100 万円 × 5% = 5 万円配当</li>
+        <li>年 2：105 万円 × 5% = 5.25 万円配当</li>
+        <li>年 3：110.25 万円 × 5% = 5.51 万円配当</li>
+      </ul>
+    </div>
+
+    <h3>戦略 2：銘柄の分散</h3>
+    <ul>
+      <li>🏦 <strong>銀行：</strong>4～6% の配当</li>
+      <li>⚡ <strong>電力：</strong>3～5% の配当</li>
+      <li>🚗 <strong>自動車：</strong>3～5% の配当</li>
+      <li>📊 <strong>REIT：</strong>4～6% の配当</li>
+    </ul>
+    <p>→ 複数の業界に分散することでリスク低減</p>
+
+    <h3>戦略 3：段階的な積立</h3>
+    <div class="example-box">
+      <h4>📌 毎月 10 万円の配当銘柄投資</h4>
+      <ul>
+        <li>1 年目：120 万円投資 → 年間配当 6 万円</li>
+        <li>3 年目：360 万円投資 → 年間配当 18 万円</li>
+        <li>5 年目：600 万円投資 → 年間配当 30 万円</li>
+      </ul>
+      <p>5 年で月 2.5 万円の不労所得完成！</p>
+    </div>
+  </div>
+
+  <!-- Section 5 -->
+  <div class="card" id="section5">
+    <h2>5. 高配当銘柄の選び方</h2>
+
+    <h3>選ぶべき銘柄の特徴</h3>
+    <div class="highlight-box">
+      <h4>✅ 安全な高配当銘柄の条件</h4>
+      <ul>
+        <li><strong>配当利回り 4～6%</strong> - 適度に高い</li>
+        <li><strong>配当性向 30～50%</strong> - 持続可能な水準</li>
+        <li><strong>10 年以上の配当実績</strong> - 信頼性の目安</li>
+        <li><strong>業績が安定している</strong> - 成熟産業</li>
+      </ul>
+    </div>
+
+    <h3>避けるべき銘柄</h3>
+    <ul>
+      <li>❌ <strong>配当利回り 10% 以上</strong> - 減配の可能性大</li>
+      <li>❌ <strong>配当性向 80% 以上</strong> - 持続性が低い</li>
+      <li>❌ <strong>配当が増えたり減ったり</strong> - 不安定</li>
+      <li>❌ <strong>株価が急落している</strong> - 危険信号</li>
+    </ul>
+
+    <h3>高配当銘柄の代表例</h3>
+    <table style="width:100%; border-collapse:collapse; margin:15px 0;">
+      <tr style="background-color:#f0f0f0;">
+        <th style="padding:10px; border:1px solid #ddd;">業界</th>
+        <th style="padding:10px; border:1px solid #ddd;">特徴</th>
+        <th style="padding:10px; border:1px solid #ddd;">配当利回り</th>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;">銀行</td>
+        <td style="padding:10px; border:1px solid #ddd;">安定配当が魅力</td>
+        <td style="padding:10px; border:1px solid #ddd;">4～6%</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;">電力・ガス</td>
+        <td style="padding:10px; border:1px solid #ddd;">インフラで安心</td>
+        <td style="padding:10px; border:1px solid #ddd;">3～5%</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;">REIT</td>
+        <td style="padding:10px; border:1px solid #ddd;">高配当専門</td>
+        <td style="padding:10px; border:1px solid #ddd;">4～6%</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;">医薬品</td>
+        <td style="padding:10px; border:1px solid #ddd;">安定利益</td>
+        <td style="padding:10px; border:1px solid #ddd;">2～4%</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Section 6 -->
+  <div class="card" id="section6">
+    <h2>6. 配当金の税金対策</h2>
+
+    <h3>配当金にかかる税金</h3>
+    <div class="example-box">
+      <h4>📌 標準的な税金</h4>
+      <ul>
+        <li>所得税：20.315%（約 20%）</li>
+        <li>内訳：所得税 15% + 住民税 5% + 復興特別税 0.315%</li>
+      </ul>
+      <p>つまり、100 万円の配当金をもらうと約 20 万円が税金で引かれます。</p>
+    </div>
+
+    <h3>配当金の受け取り方と税金</h3>
+    <table style="width:100%; border-collapse:collapse; margin:15px 0;">
+      <tr style="background-color:#f0f0f0;">
+        <th style="padding:10px; border:1px solid #ddd;">受け取り方</th>
+        <th style="padding:10px; border:1px solid #ddd;">税金の扱い</th>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;">証券会社の口座</td>
+        <td style="padding:10px; border:1px solid #ddd;">自動的に源泉徴収される（最も手軽）</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;">銀行口座</td>
+        <td style="padding:10px; border:1px solid #ddd;">源泉徴収なし（申告必要）</td>
+      </tr>
+    </table>
+
+    <h3>税金を抑える方法</h3>
+    <ul>
+      <li>✅ <strong>NISA 口座を活用</strong> - 配当金が非課税（年 120 万円まで）</li>
+      <li>✅ <strong>つみたて NISA</strong> - 長期投資向け（年 40 万円）</li>
+      <li>✅ <strong>損失と相殺</strong> - 他の投資損失と組み合わせて税金を減らす</li>
+    </ul>
+  </div>
+
+  <!-- Section 7 -->
+  <div class="card" id="section7">
+    <h2>7. 実践例とシミュレーション</h2>
+
+    <h3>シナリオ：月 5 万円の配当を目指す</h3>
+    <div class="example-box">
+      <h4>🎯 目標：年間 60 万円の配当収入</h4>
+      <ul>
+        <li>必要な投資額（5% の配当利回りで計算）</li>
+        <li>60 万円 ÷ 0.05 = <strong>1,200 万円</strong></li>
+      </ul>
+      <h4>達成ステップ</h4>
+      <ul>
+        <li>年 1：月 20 万円 × 12 = 240 万円投資</li>
+        <li>年 2：月 20 万円 × 12 = 480 万円投資</li>
+        <li>年 3：月 20 万円 × 12 = 720 万円投資</li>
+        <li>年 4：月 20 万円 × 12 = 960 万円投資</li>
+        <li>年 5：月 20 万円 × 12 = 1,200 万円投資</li>
+      </ul>
+      <p>→ 5 年で月 5 万円の不労所得完成！</p>
+    </div>
+
+    <h3>複利効果を含めたシミュレーション</h3>
+    <div class="example-box">
+      <h4>配当再投資で加速する例</h4>
+      <table style="width:100%; border-collapse:collapse; margin:15px 0;">
+        <tr style="background-color:#f0f0f0;">
+          <th style="padding:10px; border:1px solid #ddd;">年</th>
+          <th style="padding:10px; border:1px solid #ddd;">投資額</th>
+          <th style="padding:10px; border:1px solid #ddd;">配当（累計）</th>
+          <th style="padding:10px; border:1px solid #ddd;">合計資産</th>
+        </tr>
+        <tr>
+          <td style="padding:10px; border:1px solid #ddd;">1</td>
+          <td style="padding:10px; border:1px solid #ddd;">240 万</td>
+          <td style="padding:10px; border:1px solid #ddd;">12 万</td>
+          <td style="padding:10px; border:1px solid #ddd;">252 万</td>
+        </tr>
+        <tr>
+          <td style="padding:10px; border:1px solid #ddd;">3</td>
+          <td style="padding:10px; border:1px solid #ddd;">720 万</td>
+          <td style="padding:10px; border:1px solid #ddd;">100 万</td>
+          <td style="padding:10px; border:1px solid #ddd;">820 万</td>
+        </tr>
+        <tr>
+          <td style="padding:10px; border:1px solid #ddd;">5</td>
+          <td style="padding:10px; border:1px solid #ddd;">1,200 万</td>
+          <td style="padding:10px; border:1px solid #ddd;">270 万</td>
+          <td style="padding:10px; border:1px solid #ddd;">1,470 万</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Section 8 -->
+  <div class="card" id="section8">
+    <h2>8. よくある質問（FAQ）</h2>
+
+    <div class="faq-item">
+      <h3>Q: 配当金だけで生活できますか？</h3>
+      <p>A: 理論上は可能ですが、必要な資金が大きいです。月 30 万円の配当なら約 7,200 万円の投資が必要（5% 利回りの場合）。</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Q: 配当金がもらえない時期はありますか？</h3>
+      <p>A: はい。企業が赤字や減益の場合は、配当が減ったり消えたりします。これを「減配」と呼びます。</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Q: 配当利回り 8% 以上の銘柄は買い？</h3>
+      <p>A: いいえ。高利回りには必ず理由があります。株価が下落しているか、減配リスクがあることが多いです。</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Q: 配当金をもらう権利はいつまで保有すれば？</h3>
+      <p>A: 権利確定日までの保有が必須です。通常は決算月の最後の営業日までです。</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Q: NISA で配当金を受け取るメリットは？</h3>
+      <p>A: 配当金と譲渡益が非課税になります。年 120 万円まで投資可能（新 NISA は枠が拡大）。</p>
+    </div>
+  </div>
+
+  <!-- まとめ -->
+  <div class="card summary-card">
+    <h2>まとめ：配当金で不労所得を作るポイント</h2>
+    <ul>
+      <li>✅ <strong>配当金 = 企業利益の分配</strong>、完全な不労所得</li>
+      <li>✅ <strong>配当利回り 4～6% が目安</strong>、10% 以上は危険</li>
+      <li>✅ <strong>配当再投資で複利効果</strong>、資産が雪だるま式に増える</li>
+      <li>✅ <strong>税金対策が重要</strong>、NISA 活用で最大化</li>
+      <li>✅ <strong>段階的な積立が最強</strong>、月 10-20 万円の投資で実現可能</li>
+    </ul>
+  </div>
+
+  <!-- 関連記事 -->
+  <div class="card related-articles">
+    <h2>関連記事を読む</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:15px; margin-top:15px;">
+      <a href="/dividend-yield-explained" style="display:block; padding:15px; background:#fff; border:1px solid #ddd; border-radius:12px; text-decoration:none; color:#0f172a; transition:0.15s;">
+        <h4 style="margin:0 0 8px; color:#2563eb; font-size:14px;">配当利回りとは</h4>
+        <p style="margin:0; font-size:12px; color:#475569;">配当利回りの基本を学ぶ</p>
+      </a>
+      <a href="/per-explained" style="display:block; padding:15px; background:#fff; border:1px solid #ddd; border-radius:12px; text-decoration:none; color:#0f172a; transition:0.15s;">
+        <h4 style="margin:0 0 8px; color:#2563eb; font-size:14px;">PER とは</h4>
+        <p style="margin:0; font-size:12px; color:#475569;">株価評価の基本指標</p>
+      </a>
+      <a href="/stock-risk-basics" style="display:block; padding:15px; background:#fff; border:1px solid #ddd; border-radius:12px; text-decoration:none; color:#0f172a; transition:0.15s;">
+        <h4 style="margin:0 0 8px; color:#2563eb; font-size:14px;">株のリスク</h4>
+        <p style="margin:0; font-size:12px; color:#475569;">投資のリスクを学ぶ</p>
+      </a>
+    </div>
+  </div>
+
+</section>
+{% endblock %}

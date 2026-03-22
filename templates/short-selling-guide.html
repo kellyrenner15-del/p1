@@ -1,0 +1,401 @@
+{% extends "base.html" %}
+
+{% block title %}空売りとは？初心者向け完全ガイド｜仕組みとリスク | Wuelefo{% endblock %}
+{% block description %}空売りの仕組み、やり方、リスクを初心者向けに完全解説。株価下落で儲ける方法と注意点。{% endblock %}
+{% block canonical %}https://wuelefo.com/short-selling-guide{% endblock %}
+{% block og_title %}空売りとは？完全ガイド | Wuelefo{% endblock %}
+{% block og_description %}空売りの基本から実践まで。初心者でもわかるシンプル解説。{% endblock %}
+{% block og_url %}https://wuelefo.com/short-selling-guide{% endblock %}
+
+{% block content %}
+<section class="page">
+  <!-- Hero Section -->
+  <div class="guide-hero">
+    <h1>空売りとは？初心者向け完全ガイド</h1>
+    <p class="page-lead">「株価が下がったら儲ける」という逆転の発想。空売りの仕組み、メリット、デメリット、そして危険性をすべて解説します。初心者が知っておくべき知識を完全カバー。</p>
+    <div class="guide-meta">
+      <span>📊 難易度: 初心者～中級</span>
+    </div>
+  </div>
+
+  <!-- 目次 -->
+  <div class="card table-of-contents">
+    <h2>目次</h2>
+    <ul>
+      <li><a href="#section1">1. 空売りとは何か</a></li>
+      <li><a href="#section2">2. 空売りの仕組み</a></li>
+      <li><a href="#section3">3. 空売りのやり方</a></li>
+      <li><a href="#section4">4. 空売りで利益を得る方法</a></li>
+      <li><a href="#section5">5. 空売りのリスク</a></li>
+      <li><a href="#section6">6. 株の買い vs 空売り</a></li>
+      <li><a href="#section7">7. 初心者が空売りする前に</a></li>
+      <li><a href="#section8">8. よくある質問</a></li>
+    </ul>
+  </div>
+
+  <!-- Section 1 -->
+  <div class="card" id="section1">
+    <h2>1. 空売りとは何か</h2>
+
+    <h3>空売りの基本定義</h3>
+    <div class="highlight-box">
+      <h4>📌 空売りとは</h4>
+      <p><strong>「持っていない株を売って、後で安く買い戻す」という取引</strong></p>
+      <p>通常は「買ってから売る」ですが、空売りは「売ってから買う」という逆の順序です。</p>
+    </div>
+
+    <h3>わかりやすい例</h3>
+    <div class="example-box">
+      <h4>📌 日常生活の例で理解</h4>
+      <p>友人から本を借りて、それを 1,000 円で売ります。後で同じ本が 500 円で売られているのを見つけて買い戻し、友人に返します。</p>
+      <ul>
+        <li>売却価格：1,000 円</li>
+        <li>買戻し価格：500 円</li>
+        <li>利益：500 円</li>
+      </ul>
+      <p>→ これが空売りの基本的な考え方です</p>
+    </div>
+
+    <h3>空売りの目的</h3>
+    <ul>
+      <li>✅ <strong>株価下落で儲ける</strong> - 下落相場で収益を上げる</li>
+      <li>✅ <strong>ポートフォリオのヘッジ</strong> - リスク回避の手段</li>
+      <li>✅ <strong>値動きの活用</strong> - 短期トレードで稼ぐ</li>
+    </ul>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="card" id="section2">
+    <h2>2. 空売りの仕組み</h2>
+
+    <h3>空売りの流れ</h3>
+    <div class="example-box">
+      <h4>📌 空売りの 5 ステップ</h4>
+      <ol>
+        <li><strong>株を借りる：</strong>証券会社から A 社の株を借ります</li>
+        <li><strong>売却：</strong>借りた株を 10,000 円で売ります</li>
+        <li><strong>待機：</strong>株価の下落を待ちます</li>
+        <li><strong>買い戻し：</strong>株価が 8,000 円に下落したら買い戻します</li>
+        <li><strong>返却と利益：</strong>借りた株を返却し、2,000 円の利益を獲得</li>
+      </ol>
+    </div>
+
+    <h3>空売りに必要な条件</h3>
+    <table style="width:100%; border-collapse:collapse; margin:15px 0;">
+      <tr style="background-color:#f0f0f0;">
+        <th style="padding:10px; border:1px solid #ddd;">条件</th>
+        <th style="padding:10px; border:1px solid #ddd;">説明</th>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;">信用取引口座</td>
+        <td style="padding:10px; border:1px solid #ddd;">一般的な現物口座では空売りはできません</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;">担保金</td>
+        <td style="padding:10px; border:1px solid #ddd;">空売り金額の 30～50% の担保が必要</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;">証券会社の許可</td>
+        <td style="padding:10px; border:1px solid #ddd;">すべての株が空売り可能ではありません</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;">知識と経験</td>
+        <td style="padding:10px; border:1px solid #ddd;">初心者には向かない高度な取引</td>
+      </tr>
+    </table>
+
+    <h3>貸株料（レンタル料）</h3>
+    <div class="highlight-box">
+      <p>借りた株には「貸株料」がかかります。</p>
+      <ul>
+        <li>一般的な貸株料：年 1～3%</li>
+        <li>例：100 万円分の株を借りると、年 1～3 万円のコストがかかる</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="card" id="section3">
+    <h2>3. 空売りのやり方</h2>
+
+    <h3>空売りの手順</h3>
+    <div class="example-box">
+      <h4>📌 実践的なやり方</h4>
+      <ol>
+        <li>証券会社で「信用取引口座」を開く</li>
+        <li>担保金を入金（空売り予定金額の 30～50%）</li>
+        <li>空売りしたい銘柄を選ぶ</li>
+        <li>注文画面で「売り」を選択</li>
+        <li>売却注文が成立</li>
+        <li>株価が��がったタイミングで「買い」注文</li>
+        <li>ポジションを閉じて利益確定</li>
+      </ol>
+    </div>
+
+    <h3>空売り可能な銘柄</h3>
+    <ul>
+      <li>✅ <strong>時価総額が大きい企業</strong> - トヨタ、ソニー、NTT など</li>
+      <li>✅ <strong>流動性が高い銘柄</strong> - 日中活発に取引される</li>
+      <li>❌ <strong>上場直後の銘柄</strong> - 空売り規制がある場合</li>
+      <li>❌ <strong>マイナー企業</strong> - 借株できない可能性</li>
+    </ul>
+
+    <h3>空売りの注文方法</h3>
+    <table style="width:100%; border-collapse:collapse; margin:15px 0;">
+      <tr style="background-color:#f0f0f0;">
+        <th style="padding:10px; border:1px solid #ddd;">注文方法</th>
+        <th style="padding:10px; border:1px solid #ddd;">説明</th>
+        <th style="padding:10px; border:1px solid #ddd;">リスク</th>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;"><strong>成行注文</strong></td>
+        <td style="padding:10px; border:1px solid #ddd;">すぐに売却（価格指定なし）</td>
+        <td style="padding:10px; border:1px solid #ddd;">低い</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;"><strong>指値注文</strong></td>
+        <td style="padding:10px; border:1px solid #ddd;">指定価格での売却を待つ</td>
+        <td style="padding:10px; border:1px solid #ddd;">中程度</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;"><strong>逆指値注文</strong></td>
+        <td style="padding:10px; border:1px solid #ddd;">損切り目安を設定</td>
+        <td style="padding:10px; border:1px solid #ddd;">リスク管理可能</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Section 4 -->
+  <div class="card" id="section4">
+    <h2>4. 空売りで利益を得る方法</h2>
+
+    <h3>基本的な利益計算</h3>
+    <div class="example-box">
+      <h4>📌 利益計算式</h4>
+      <p><strong>利益 = 売却価格 - 買戻し価格 - 貸株料</strong></p>
+      <ul>
+        <li>売却価格：10,000 円</li>
+        <li>買戻し価格：7,000 円</li>
+        <li>利益（手数料・貸株料前）：3,000 円</li>
+      </ul>
+    </div>
+
+    <h3>実践例</h3>
+    <div class="example-box">
+      <h4>例：B 社の株で空売り取引</h4>
+      <ul>
+        <li>空売り数：100 株</li>
+        <li>売却価格：5,000 円 × 100 = 500,000 円</li>
+        <li>買戻し価格：4,000 円 × 100 = 400,000 円</li>
+        <li>利益（手数料前）：100,000 円</li>
+        <li>手数料（往復）：約 3,000 円</li>
+        <li>貸株料（3 ヶ月、年 2%）：約 2,500 円</li>
+        <li>実際の利益：94,500 円</li>
+      </ul>
+    </div>
+
+    <h3>利益を出すコツ</h3>
+    <ul>
+      <li>✅ <strong>大きく下落しそうな銘柄を選ぶ</strong> - トレンド分析が重要</li>
+      <li>✅ <strong>ショートポジション期間を短くする</strong> - 貸株料を節約</li>
+      <li>✅ <strong>損切りルールを厳守する</strong> - 損失を限定する</li>
+      <li>✅ <strong>複数の銘柄を組み合わせない</strong> - 初心者は 1 銘柄に絞る</li>
+    </ul>
+  </div>
+
+  <!-- Section 5 -->
+  <div class="card" id="section5">
+    <h2>5. 空売りのリスク</h2>
+
+    <h3>⚠️ 最大の危険：無限の損失</h3>
+    <div class="highlight-box" style="background: rgba(239, 68, 68, 0.1); border-left-color: #ef4444;">
+      <h4>❌ 通常の買い vs 空売り</h4>
+      <p><strong>買い：</strong>最大損失は投資額の 100%（株価 0 円になっても）</p>
+      <p><strong>空売り：</strong>最大損失は無限大！！株価が上がり続ければ損失は限定なし</p>
+    </div>
+
+    <h3>空売りの主なリスク</h3>
+    <table style="width:100%; border-collapse:collapse; margin:15px 0;">
+      <tr style="background-color:#ffe6e6;">
+        <th style="padding:10px; border:1px solid #ddd;">リスク</th>
+        <th style="padding:10px; border:1px solid #ddd;">説明</th>
+        <th style="padding:10px; border:1px solid #ddd;">対策</th>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;"><strong>株価上昇</strong></td>
+        <td style="padding:10px; border:1px solid #ddd;">買戻し価格 > 売却価格で損失</td>
+        <td style="padding:10px; border:1px solid #ddd;">逆指値注文で損切り</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;"><strong>強制買戻し</strong></td>
+        <td style="padding:10px; border:1px solid #ddd;">証券会社が無理やり買い戻す</td>
+        <td style="padding:10px; border:1px solid #ddd;">担保維持率を監視</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;"><strong>貸株料の負担</strong></td>
+        <td style="padding:10px; border:1px solid #ddd;">長期保有で手数料が増加</td>
+        <td style="padding:10px; border:1px solid #ddd;">短期トレードに絞る</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;"><strong>借株不足</strong></td>
+        <td style="padding:10px; border:1px solid #ddd;">借株できる株がなくなる</td>
+        <td style="padding:10px; border:1px solid #ddd;">流動性の高い銘柄を選ぶ</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;"><strong>配当金の支払い</strong></td>
+        <td style="padding:10px; border:1px solid #ddd;">空売り期間の配当を支払う</td>
+        <td style="padding:10px; border:1px solid #ddd;">配当日前に買い戻す</td>
+      </tr>
+    </table>
+
+    <h3>担保維持率の監視</h3>
+    <div class="example-box">
+      <h4>📌 強制買戻しになる基準</h4>
+      <ul>
+        <li>担保維持率が 130% 以下 → 追加担保が必要</li>
+        <li>担保維持率が 100% 以下 → 強制買戻し（損失確定）</li>
+      </ul>
+      <p>→ 常に担保を監視する必要があります</p>
+    </div>
+  </div>
+
+  <!-- Section 6 -->
+  <div class="card" id="section6">
+    <h2>6. 株の買い vs 空売り</h2>
+
+    <h3>比較表</h3>
+    <table style="width:100%; border-collapse:collapse; margin:15px 0;">
+      <tr style="background-color:#f0f0f0;">
+        <th style="padding:10px; border:1px solid #ddd;">項目</th>
+        <th style="padding:10px; border:1px solid #ddd;">通常の買い</th>
+        <th style="padding:10px; border:1px solid #ddd;">空売り</th>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;">基本戦略</td>
+        <td style="padding:10px; border:1px solid #ddd;">買ってから売る</td>
+        <td style="padding:10px; border:1px solid #ddd;">売ってから買う</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;">期待する値動き</td>
+        <td style="padding:10px; border:1px solid #ddd;">株価上昇</td>
+        <td style="padding:10px; border:1px solid #ddd;">株価下落</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;">最大利益</td>
+        <td style="padding:10px; border:1px solid #ddd;">無限大</td>
+        <td style="padding:10px; border:1px solid #ddd;">売却価格 100%</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;">最大損失</td>
+        <td style="padding:10px; border:1px solid #ddd;">投資額 100%</td>
+        <td style="padding:10px; border:1px solid #ddd;">無限大 ⚠️</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;">必要な口座</td>
+        <td style="padding:10px; border:1px solid #ddd;">現物口座</td>
+        <td style="padding:10px; border:1px solid #ddd;">信用取引口座</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border:1px solid #ddd;">難易度</td>
+        <td style="padding:10px; border:1px solid #ddd;">初心者向け</td>
+        <td style="padding:10px; border:1px solid #ddd;">中～上級向け</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Section 7 -->
+  <div class="card" id="section7">
+    <h2>7. 初心者が空売りする前に</h2>
+
+    <h3>✅ 空売りに向いている人</h3>
+    <ul>
+      <li>株式投資で最低 3 年以上の経験がある</li>
+      <li>リスク管理と損切りが徹底できる</li>
+      <li>短期トレードに時間を割ける</li>
+      <li>メンタルが強く、損失に動じない</li>
+    </ul>
+
+    <h3>❌ 空売りに向いていない人</h3>
+    <ul>
+      <li>株式投資初心者（1 年未満）</li>
+      <li>長期保有タイプの投資家</li>
+      <li>小額でコツコツ投資したい人</li>
+      <li>ストレスに弱い人</li>
+    </ul>
+
+    <h3>初心者のための安全な始め方</h3>
+    <div class="highlight-box" style="background: rgba(34, 197, 94, 0.1); border-left-color: #22c55e;">
+      <h4>✅ まずはここから</h4>
+      <ol>
+        <li>信用取引の仕組みを完全に理解する</li>
+        <li>デモ口座や少額（1 銘柄 1～2 万円分）で練習</li>
+        <li>必ず損切りルールを設定（例：5% 下落で買い戻す）</li>
+        <li>短期（3～7 日）での取引に限定</li>
+        <li>複数銘柄ではなく 1 銘柄に集中</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Section 8 -->
+  <div class="card" id="section8">
+    <h2>8. よくある質問（FAQ）</h2>
+
+    <div class="faq-item">
+      <h3>Q: 空売りは合法ですか？</h3>
+      <p>A: はい、完全に合法です。ただし、上場直後の銘柄など規制される場合があります。</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Q: 空売りで破産することはありますか？</h3>
+      <p>A: はい、可能性があります。損失が無限大なので、損切りルール厳守が必須です。</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Q: 空売りで得た利益には税金がかかりますか？</h3>
+      <p>A: はい。譲渡益として 20.315% の税金がかかります（源泉徴収）。</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Q: 空売りはいつまで続けられますか？</h3>
+      <p>A: 理論上は��期限ですが、借株がなくなると強制決済されます。通常は数日～数ヶ月です。</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Q: 空売りの対象になりやすい銘柄は？</h3>
+      <p>A: 時価総額が大きく、流動性が高い銘柄（日経 225 企業など）が空売り対象になりやすいです。</p>
+    </div>
+  </div>
+
+  <!-- まとめ -->
+  <div class="card summary-card">
+    <h2>まとめ：空売りの重要ポイント</h2>
+    <ul>
+      <li>✅ <strong>空売り = 売ってから買う</strong>、株価下落で利益</li>
+      <li>✅ <strong>無限の損失リスク</strong>が最大の危険</li>
+      <li>✅ <strong>信用取引口座が必須</strong>、担保金が必要</li>
+      <li>✅ <strong>損切りルール厳守</strong>が生存の鍵</li>
+      <li>✅ <strong>初心者には不向き</strong>、十分な経験が必須</li>
+    </ul>
+  </div>
+
+  <!-- 関連記事 -->
+  <div class="card related-articles">
+    <h2>関連記事を読む</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:15px; margin-top:15px;">
+      <a href="/stock-risk-basics" style="display:block; padding:15px; background:#fff; border:1px solid #ddd; border-radius:12px; text-decoration:none; color:#0f172a; transition:0.15s;">
+        <h4 style="margin:0 0 8px; color:#2563eb; font-size:14px;">株のリスク</h4>
+        <p style="margin:0; font-size:12px; color:#475569;">投資リスク管理の基本</p>
+      </a>
+      <a href="/per-explained" style="display:block; padding:15px; background:#fff; border:1px solid #ddd; border-radius:12px; text-decoration:none; color:#0f172a; transition:0.15s;">
+        <h4 style="margin:0 0 8px; color:#2563eb; font-size:14px;">PER とは</h4>
+        <p style="margin:0; font-size:12px; color:#475569;">銘柄選びの基本指標</p>
+      </a>
+      <a href="/dividend-income-passive" style="display:block; padding:15px; background:#fff; border:1px solid #ddd; border-radius:12px; text-decoration:none; color:#0f172a; transition:0.15s;">
+        <h4 style="margin:0 0 8px; color:#2563eb; font-size:14px;">配当金投資</h4>
+        <p style="margin:0; font-size:12px; color:#475569;">安全な投資戦略</p>
+      </a>
+    </div>
+  </div>
+
+</section>
+{% endblock %}

@@ -28,19 +28,19 @@ def what_is_eps():
 def what_is_bps():
     return render_template("what_is_bps.html")
 
-@app.route("/dividend_yield_explained")
+@app.route("/dividend-yield-explained")
 def dividend_yield_explained():
     return render_template("dividend_yield_explained.html")
 
-@app.route("/what_is_rsi")
+@app.route("/what-is-rsi")
 def what_is_rsi():
     return render_template("what_is_rsi.html")
 
-@app.route("/moving_average_explained")
+@app.route("/moving-average-explained")
 def moving_average_explained():
     return render_template("moving_average_explained.html")
 
-@app.route("/macd_explained")
+@app.route("/macd-explained")
 def macd_explained():
     return render_template("macd_explained.html")
 
@@ -53,35 +53,35 @@ def beginner_guide():
 def stock_risk_guide():
     return render_template("stock_risk_guide.html")
 
-@app.route("/bollinger_bands_explained")
+@app.route("/bollinger-bands-explained")
 def bollinger_bands_explained():
     return render_template("bollinger_bands_explained.html")
 
-@app.route("/volume_analysis_explained")
+@app.route("/volume-analysis-explained")
 def volume_analysis_explained():
     return render_template("volume_analysis_explained.html")
 
-@app.route("/support_and_resistance_explained")
+@app.route("/support-and-resistance-explained")
 def support_and_resistance_explained():
     return render_template("support_and_resistance_explained.html")
 
-@app.route("/candlestick_patterns_explained")
+@app.route("/candlestick-patterns-explained")
 def candlestick_patterns_explained():
     return render_template("candlestick_patterns_explained.html")
 
-@app.route("/how_to_read_a_balance_sheet")
+@app.route("/how-to-read-a-balance-sheet")
 def how_to_read_a_balance_sheet():
     return render_template("how_to_read_a_balance_sheet.html")
 
-@app.route("/how_to_read_an_income_statement")
+@app.route("/how-to-read-an-income-statement")
 def how_to_read_an_income_statement():
     return render_template("how_to_read_an_income_statement.html")
 
-@app.route("/how_to_read_a_cash_flow_statement")
+@app.route("/how-to-read-a-cash-flow-statement")
 def how_to_read_a_cash_flow_statement():
     return render_template("how_to_read_a_cash_flow_statement.html")
 
-# ===== 新增的三个页面 =====
+# ===== 既存の追加ページ =====
 @app.route("/dividend-payout-ratio-explained")
 def dividend_payout_ratio_explained():
     return render_template("dividend_payout_ratio_explained.html")
@@ -93,6 +93,15 @@ def stock_analysis_guide():
 @app.route("/stock-risk-basics")
 def stock_risk_basics():
     return render_template("stock_risk_basics.html")
+
+# ===== 新規追加：2つの新しい記事 =====
+@app.route("/dividend-income-passive")
+def dividend_income_passive():
+    return render_template("dividend-income-passive.html")
+
+@app.route("/short-selling-guide")
+def short_selling_guide():
+    return render_template("short-selling-guide.html")
 
 # ===== その他 =====
 @app.route("/about")
@@ -118,7 +127,7 @@ def sitemap():
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://wuelefo.com/</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -159,25 +168,25 @@ def sitemap():
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wuelefo.com/dividend_yield_explained</loc>
+    <loc>https://wuelefo.com/dividend-yield-explained</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wuelefo.com/what_is_rsi</loc>
+    <loc>https://wuelefo.com/what-is-rsi</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wuelefo.com/moving_average_explained</loc>
+    <loc>https://wuelefo.com/moving-average-explained</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://wuelefo.com/macd_explained</loc>
+    <loc>https://wuelefo.com/macd-explained</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -189,44 +198,44 @@ def sitemap():
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://wuelefo.com/bollinger_bands_explained</loc>
+    <loc>https://wuelefo.com/bollinger-bands-explained</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://wuelefo.com/volume_analysis_explained</loc>
+    <loc>https://wuelefo.com/volume-analysis-explained</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://wuelefo.com/support_and_resistance_explained</loc>
+    <loc>https://wuelefo.com/support-and-resistance-explained</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://wuelefo.com/candlestick_patterns_explained</loc>
+    <loc>https://wuelefo.com/candlestick-patterns-explained</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://wuelefo.com/how_to_read_a_balance_sheet</loc>
+    <loc>https://wuelefo.com/how-to-read-a-balance-sheet</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://wuelefo.com/how_to_read_an_income_statement</loc>
+    <loc>https://wuelefo.com/how-to-read-an-income-statement</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://wuelefo.com/how_to_read_a_cash_flow_statement</loc>
-    <lastmod>2026-03-10</lastmod>
+    <loc>https://wuelefo.com/how-to-read-a-cash-flow-statement</loc>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -247,6 +256,18 @@ def sitemap():
     <lastmod>2026-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wuelefo.com/dividend-income-passive</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wuelefo.com/short-selling-guide</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://wuelefo.com/about</loc>
@@ -297,4 +318,4 @@ Allow: /
     return response
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True, port=800)
