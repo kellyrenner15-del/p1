@@ -81,6 +81,19 @@ def how_to_read_an_income_statement():
 def how_to_read_a_cash_flow_statement():
     return render_template("how_to_read_a_cash_flow_statement.html")
 
+# ===== 新增的三个页面 =====
+@app.route("/dividend-payout-ratio-explained")
+def dividend_payout_ratio_explained():
+    return render_template("dividend_payout_ratio_explained.html")
+
+@app.route("/stock-analysis-guide")
+def stock_analysis_guide():
+    return render_template("stock_analysis_guide.html")
+
+@app.route("/stock-risk-basics")
+def stock_risk_basics():
+    return render_template("stock_risk_basics.html")
+
 # ===== その他 =====
 @app.route("/about")
 def about():
@@ -98,7 +111,7 @@ def privacy():
 def terms():
     return render_template("terms.html")
 
-# ===== Sitemap（从文件读取） =====
+# ===== Sitemap（直接在代码中） =====
 @app.route("/sitemap.xml")
 def sitemap():
     xml = '''<?xml version="1.0" encoding="UTF-8"?>
@@ -213,6 +226,24 @@ def sitemap():
   </url>
   <url>
     <loc>https://wuelefo.com/how_to_read_a_cash_flow_statement</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wuelefo.com/dividend-payout-ratio-explained</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wuelefo.com/stock-analysis-guide</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wuelefo.com/stock-risk-basics</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
