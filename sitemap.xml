@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://wuelefo.com/</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -110,7 +110,7 @@
   </url>
   <url>
     <loc>https://wuelefo.com/how-to-read-a-cash-flow-statement</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -132,6 +132,38 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+  <!-- ===== 新增的 5 篇文章 ===== -->
+  <url>
+    <loc>https://wuelefo.com/dividend-income-passive</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wuelefo.com/short-selling-guide</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wuelefo.com/ipo-investment-guide</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wuelefo.com/stock-investment-taxes</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wuelefo.com/nasdaq-index-guide</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- ===== その他ページ ===== -->
   <url>
     <loc>https://wuelefo.com/about</loc>
     <lastmod>2026-03-10</lastmod>

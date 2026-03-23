@@ -94,7 +94,7 @@ def stock_analysis_guide():
 def stock_risk_basics():
     return render_template("stock_risk_basics.html")
 
-# ===== 新規追加：2つの新しい記事 =====
+# ===== 新規追加：5つの新しい記事 =====
 @app.route("/dividend-income-passive")
 def dividend_income_passive():
     return render_template("dividend-income-passive.html")
@@ -102,6 +102,18 @@ def dividend_income_passive():
 @app.route("/short-selling-guide")
 def short_selling_guide():
     return render_template("short-selling-guide.html")
+
+@app.route("/ipo-investment-guide")
+def ipo_investment_guide():
+    return render_template("ipo-investment-guide.html")
+
+@app.route("/stock-investment-taxes")
+def stock_investment_taxes():
+    return render_template("stock-investment-taxes.html")
+
+@app.route("/nasdaq-index-guide")
+def nasdaq_index_guide():
+    return render_template("nasdaq-index-guide.html")
 
 # ===== その他 =====
 @app.route("/about")
@@ -127,7 +139,7 @@ def sitemap():
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://wuelefo.com/</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -259,13 +271,31 @@ def sitemap():
   </url>
   <url>
     <loc>https://wuelefo.com/dividend-income-passive</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://wuelefo.com/short-selling-guide</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wuelefo.com/ipo-investment-guide</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wuelefo.com/stock-investment-taxes</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wuelefo.com/nasdaq-index-guide</loc>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -318,4 +348,4 @@ Allow: /
     return response
 
 if __name__ == "__main__":
-    app.run(debug=True, port=800)
+    app.run(debug=True, port=8000)
