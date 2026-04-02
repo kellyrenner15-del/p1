@@ -163,6 +163,13 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+    <url>
+    <loc>https://wuelefo.com/rsi-how-to-use</loc>
+    <lastmod>2026-4-1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- ===== その他ページ ===== -->
   <url>
     <loc>https://wuelefo.com/about</loc>

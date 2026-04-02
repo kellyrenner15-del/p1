@@ -162,6 +162,10 @@ def stock_investment_taxes():
 def nasdaq_index_guide():
     return render_template("nasdaq-index-guide.html")
 
+@app.route("/rsi-how-to-use")
+def rsi_how_to_use():
+    return render_template("rsi-how-to-use.html")
+
 
 # ===== その他 =====
 @app.route("/about")
@@ -348,6 +352,12 @@ def sitemap():
   <url>
     <loc>https://wuelefo.com/nasdaq-index-guide</loc>
     <lastmod>2026-03-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wuelefo.com/rsi-how-to-use</loc>
+    <lastmod>2026-4-2</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
