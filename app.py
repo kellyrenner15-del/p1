@@ -357,7 +357,7 @@ def sitemap():
   </url>
   <url>
     <loc>https://wuelefo.com/rsi-how-to-use</loc>
-    <lastmod>2026-4-2</lastmod>
+    <lastmod>2026-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
