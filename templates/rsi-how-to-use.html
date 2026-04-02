@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block title %}RSIの使い方｜買い時・売り時の見極めと失敗しないコツを初心者向けに解説 | Wuelefo{% endblock %}
+{% block description %}RSIの基本から「買われすぎ・売られすぎ」の見方、買い時/売り時の判断、ダマシを減らすコツ（移動平均・トレンド確認）まで、初心者にもわかりやすく解説します。{% endblock %}
+{% block canonical %}https://wuelefo.com/rsi-how-to-use{% endblock %}
+{% block og_title %}RSIの使い方｜買い時・売り時を初心者向けに解説 | Wuelefo{% endblock %}
+{% block og_description %}RSIでタイミングを判断する基本を整理。買われすぎ・売られすぎの目安、注意点、実践のコツまで。{% endblock %}
+{% block og_url %}https://wuelefo.com/rsi-how-to-use{% endblock %}
+
+{% block content %}
+<section class="page">
+  <div class="guide-hero">
+    <h1>RSIの使い方｜買い時・売り時の見極め方</h1>
+    <p class="page-lead">
+      RSI（相対力指数）は、相場が「買われすぎ」なのか「売られすぎ」なのかを見て、
+      エントリーのタイミングを考えるときに便利なテクニカル指標です。
+      ただし、RSIだけで判断するとダマシもあるので、コツを押さえるのが大事です。
+    </p>
+  </div>
+
+  <div class="card table-of-contents">
+    <h2>目次</h2>
+    <ul>
+      <li><a href="#s1">1. RSIとは？まずは超基本</a></li>
+      <li><a href="#s2">2. RSIの目安（30/70）は本当に使える？</a></li>
+      <li><a href="#s3">3. RSIで買い時・売り時を判断する例</a></li>
+      <li><a href="#s4">4. RSIの弱点（ダマシ）と回避のコツ</a></li>
+      <li><a href="#s5">5. よくある質問</a></li>
+    </ul>
+  </div>
+
+  <div class="card" id="s1">
+    <h2>1. RSIとは？まずは超基本</h2>
+    <p>
+      RSIは、一定期間の「上げの強さ」と「下げの強さ」を比べて数値化した指標です。
+      0〜100の範囲で表示され、数値が高いほど買いが強く、低いほど売りが強いと考えます。
+    </p>
+    <ul class="list">
+      <li><strong>RSIが高い</strong>：買いが優勢（過熱している可能性）</li>
+      <li><strong>RSIが低い</strong>：売りが優勢（売られすぎの可���性）</li>
+    </ul>
+  </div>
+
+  <div class="card" id="s2">
+    <h2>2. RSIの目安（30/70）は本当に使える？</h2>
+    <p>一般的によく使われる目安は次のとおりです。</p>
+    <ul class="list">
+      <li><strong>70以上</strong>：買われすぎ（いったん調整しやすい）</li>
+      <li><strong>30以下</strong>：売られすぎ（反発しやすい）</li>
+    </ul>
+    <p class="muted">
+      ※ただし、強い上昇トレンドだと70以上が続いたり、下落トレンドだと30以下が続くこともあります。
+      「70超えた＝即売り」みたいに決め打ちしないほうが安全です。
+    </p>
+  </div>
+
+  <div class="card" id="s3">
+    <h2>3. RSIで買い時・売り時を判断する例</h2>
+
+    <h3>買いの考え方（例）</h3>
+    <ul class="list">
+      <li>RSIが30付近まで下がる</li>
+      <li>その後、RSIが反転して上向きになる</li>
+      <li>ローソク足でも下げ止まりの形（長い下ヒゲなど）が出る</li>
+    </ul>
+
+    <h3>売りの考え方（例）</h3>
+    <ul class="list">
+      <li>RSIが70付近まで上がる</li>
+      <li>RSIが横ばい〜下向きに変わる</li>
+      <li>株価も上値が重くなる（高値更新が止まる）</li>
+    </ul>
+  </div>
+
+  <div class="card" id="s4">
+    <h2>4. RSIの弱点（ダマシ）と回避のコツ</h2>
+
+    <h3>弱点：トレンド相場に弱い</h3>
+    <p>
+      RSIはレンジ相場（上下に行ったり来たり）では効きやすい一方で、
+      強いトレンドが出ていると目安が機能しづらいことがあります。
+    </p>
+
+    <h3>回避のコツ</h3>
+    <ul class="list">
+      <li><strong>移動平均線</strong>でトレンドを確認してからRSIを見る</li>
+      <li><strong>支持線・抵抗線</strong>の近くで反転するかも合わせて見る</li>
+      <li>一発で入らず、<strong>分割で入る</strong>（メンタル的にも楽）</li>
+    </ul>
+
+    <p>
+      迷ったら、まずはRSIを「補助的な判断材料」として使うのがおすすめです。
+    </p>
+  </div>
+
+  <div class="card" id="s5">
+    <h2>5. よくある質問</h2>
+    <div class="faq-item">
+      <h3>Q. RSIの期間は何がいい？</h3>
+      <p>A. よく使われるのは14日です。まずは14日で慣れて、短期なら9日なども試すと理解が深まります。</p>
+    </div>
+    <div class="faq-item">
+      <h3>Q. RSIだけで勝てますか？</h3>
+      <p>A. 正直、RSIだけだと難しいです。トレンド（移動平均）や価格帯（支持線・抵抗線）とセットで考えるほうが安定します。</p>
+    </div>
+  </div>
+
+</section>
+{% endblock %}
