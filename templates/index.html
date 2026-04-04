@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
+
 {% block title %}株式の基礎知識とリスク整理ツール | Wuelefo{% endblock %}
 {% block description %}教育目的の株式情報整理サイト。株式投資の基礎知識、リスクの考え方、情報整理ツールを提供します。{% endblock %}
 {% block canonical %}https://wuelefo.com/{% endblock %}
@@ -179,7 +180,7 @@
       </div>
 
       <!-- ✅ 替换成你的 LINE 链接 -->
-      <a class="modal-cta" href="https://line.me/ti/p/tkJQSFZj2z" target="_blank" rel="noopener">
+      <a class="modal-cta" href="https://sdlink.cc/93e1Dw" target="_blank" rel="noopener">
         ↗ LINEで詳細データを受け取る
       </a>
 
@@ -189,5 +190,30 @@
     </div>
   </div>
 </div>
+<!-- Google tag (gtag.js) - Google Ads (HOME ONLY) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id='AW-18010671265"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
 
+  // Google Ads
+  gtag('config', ''AW-18010671265');
+</script>
+
+<!-- Google Ads conversion: 点击弹窗里的 LINE 按钮（a.modal-cta）触发 -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var lineLink = document.querySelector('a.modal-cta');
+    if (!lineLink) return;
+
+    lineLink.addEventListener('click', function () {
+      if (typeof gtag !== 'function') return;
+
+      gtag('event', 'conversion', {
+        'send_to': ''AW-18010671265'
+      });
+    });
+  });
+</script>
 {% endblock %}

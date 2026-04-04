@@ -854,3 +854,40 @@ h1,h2,h3{ letter-spacing:-.02em; }
     display: none;
   }
 }
+/* ===== Modal ===== */
+.modal-panel{
+  position: relative;
+  width: min(480px, calc(100% - 28px));
+  margin: 60px auto;
+
+  /* 改成白色底 */
+  background: #ffffff;
+
+  border: 1px solid rgba(2,6,23,.10);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0,0,0,.18);
+}
+
+.modal-body{
+  padding: 16px;
+
+  /* 改成深色文字，适配白底 */
+  color:#0f172a;
+}
+
+.modal-box{
+  /* 内容卡片也改成浅色 */
+  background: #f8fafc;
+  border: 1px solid rgba(2,6,23,.10);
+  border-radius: 16px;
+  padding: 14px;
+}
+
+/* 如果你希望 muted 在白底下更清晰 */
+.modal-body .muted{
+  color:#475569;
+}
+.modal-body .small-note{
+  color:#64748b;
+}
